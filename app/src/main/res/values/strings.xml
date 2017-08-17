@@ -1,6 +1,30 @@
 <resources>
+
+
     <string name="app_name">Education</string>
     <string name="p001_title">안전체험교육장</string>
-    <string name="p001_subtitle">고성 그린파워현장</string>
+    <string name="p001_subtitle">고성 그린파워현장</string> <!-- 현장명 -->
     <string name="p001_pw">1234</string>
+
+
+    <!-- 메인페이지 버튼 이름들 -->
+    <string name="button_4d_center">4D 체험장</string>
+    <string name="button_sealed_center">밀폐공간 체험장</string>
+    <string name="button_safety_center">안전화/안전모 체험장</string>
+    <string name="button_seatbelt_center">안전벨트 체험장</string>
+    <string name="button_extinguisher_center">소화기 체험장</string>
+    <string name="button_falls_center">낙하물 체험장</string>
+    <string name="button_prevent_falling_center">추락사고 예방 체험장</string>
+    <string name="button_manage_heavy_center">중장비 관리 체험장</string>
+    <string name="button_rope_cranking_center">줄걸이 체험장</string>
+    <string name="button_gas_explode_center">가스/폭발사고 예방</string>
+    <string name="button_electricity_center">전기사고 예방</string>
+    <string name="button_CPR_center">심폐소생술 체험장</string>
+    <string name="button_alco_nico_center">음주/흡연 체험장</string>
+    <string name="button_heavy_lifting_center">중량물 들기 체험장</string>
+
+
+    <!-- CPR Activity -->
+    <string name="CPR_education">교육 매뉴얼</string>
+    <string name="CPR_gear">장비 매뉴얼</string>
 </resources>
