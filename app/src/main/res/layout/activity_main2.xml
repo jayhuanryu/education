@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jjgo.education.education.Main"
-    android:orientation="vertical">
-    
+    android:background="@drawable/blue_background"
+    android:orientation="vertical"
+    tools:context="com.jjgo.education.education.Main">
+
     <!--  상단 -->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         android:weightSum="4">
 
@@ -19,95 +21,201 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/p001_ci"/>
+            android:src="@drawable/p001_ci" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
             android:layout_gravity="center_vertical"
+            android:layout_weight="2"
             android:gravity="center_vertical"
             android:text="@string/p001_subtitle"
-            android:textSize="30sp"/>
+            android:textColor="#000000"
+            android:textSize="30sp" />
 
-        <Button
-            android:id="@+id/btn_back"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:gravity="center_vertical"
-            android:text="돌아가기"/>
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_back"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
     </LinearLayout>
-    
-    
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        android:text="안전체험교육장"
+        android:textColor="#000000"
+        android:textSize="60sp" />
+
     <!-- 버튼 레이아웃 14개 버튼 -->
-<TableLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:stretchColumns="*"
-    >
-    <TableRow>
-        <Button
-            android:id="@+id/btn_4d_center"
-            android:text="@string/button_4d_center"/>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:stretchColumns="*">
 
-        <Button
-            android:id="@+id/btn_sealed_center"
-            android:text="@string/button_sealed_center"/>
-    </TableRow>
+        <TableRow>
 
-    <TableRow>
-        <Button
-            android:id="@+id/btn_safety_center"
-            android:text="@string/button_safety_center"/>
+            <Button
+                android:id="@+id/btn_4d_center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background"
+                android:text="@string/button_4d_center"
+                android:textColor="#000000"
+                android:textSize="30sp" />
 
-        <Button
-            android:id="@+id/btn_seatbelt_center"
-            android:text="@string/button_seatbelt_center"/>
-    </TableRow>
+            <Button
+                android:id="@+id/btn_sealed_center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background"
+                android:text="@string/button_sealed_center"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+        </TableRow>
 
-    <TableRow>
-        <Button
-            android:id="@+id/btn_extinguisher_center"
-            android:text="@string/button_extinguisher_center"/>
-        <Button
-            android:id="@+id/btn_falls_center"
-            android:text="@string/button_falls_center"/>
-    </TableRow>
-    <TableRow>
-        <Button
-            android:id="@+id/btn_prevent_falling_center"
-            android:text="@string/button_prevent_falling_center"/>
-        <Button
-            android:id="@+id/btn_manage_heavy_center"
-            android:text="@string/button_manage_heavy_center"/>
-    </TableRow>
-    <TableRow>
-        <Button
-            android:id="@+id/btn_rope_craking_center"
-            android:text="@string/button_rope_cranking_center"/>
-        <Button
-            android:id="@+id/btn_gas_explode_center"
-            android:text="@string/button_gas_explode_center"/>
-    </TableRow>
-    <TableRow>
-        <Button
-            android:id="@+id/btn_electricity_center"
-            android:text="@string/button_electricity_center"/>
-        <Button
-            android:id="@+id/btn_CPR_center"
-            android:text="@string/button_CPR_center"/>
-    </TableRow>
-    <TableRow>
-        <Button
-            android:id="@+id/btn_alco_nico_center"
-            android:text="@string/button_alco_nico_center"/>
-        <Button
-            android:id="@+id/btn_heavy_lifting_center"
-            android:text="@string/button_heavy_lifting_center"/>
-    </TableRow>
-</TableLayout>
-    
-    
+        <TableRow android:layout_marginTop="50dp">
+
+            <Button
+                android:id="@+id/btn_safety_center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background"
+                android:text="@string/button_safety_center"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btn_seatbelt_center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background"
+                android:text="@string/button_seatbelt_center"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="50dp">
+
+            <Button
+                android:id="@+id/btn_extinguisher_center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background"
+                android:text="@string/button_extinguisher_center"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btn_falls_center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background"
+                android:text="@string/button_falls_center"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="50dp">
+
+            <Button
+                android:id="@+id/btn_prevent_falling_center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background"
+                android:text="@string/button_prevent_falling_center"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btn_manage_heavy_center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background"
+                android:text="@string/button_manage_heavy_center"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="50dp">
+
+            <Button
+                android:id="@+id/btn_rope_craking_center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background"
+                android:text="@string/button_rope_cranking_center"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btn_gas_explode_center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background"
+                android:text="@string/button_gas_explode_center"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="50dp">
+
+            <Button
+                android:id="@+id/btn_electricity_center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background"
+                android:text="@string/button_electricity_center"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btn_CPR_center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background"
+                android:text="@string/button_CPR_center"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="50dp">
+
+            <Button
+                android:id="@+id/btn_alco_nico_center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background"
+                android:text="@string/button_alco_nico_center"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/btn_heavy_lifting_center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background"
+                android:text="@string/button_heavy_lifting_center"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+        </TableRow>
+    </TableLayout>
+
+
 </LinearLayout>

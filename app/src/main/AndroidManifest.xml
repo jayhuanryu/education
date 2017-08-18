@@ -11,7 +11,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,24 +22,39 @@
         <!-- MainActivity -->
         <activity
             android:name=".Main"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait"/>
         <!-- 4D center -->
         <activity
             android:name=".FourDCenter"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".SealedCenter" />
-        <activity android:name=".SafetyCenter" />
-        <activity android:name=".SeatbeltCenter" />
-        <activity android:name=".ExtinguisherCenter" />
-        <activity android:name=".FallsCenter" />
-        <activity android:name=".PreventFallCenter" />
-        <activity android:name=".ManageHeavyCenter" />
-        <activity android:name=".RopeCrankingCenter" />
-        <activity android:name=".GasExplodeCenter" />
-        <activity android:name=".ElectricityCenter" />
-        <activity android:name=".CPRCenter" />
-        <activity android:name=".AlcoNicoCenter" />
-        <activity android:name=".HeavyLiftingCenter"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SealedCenter"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SafetyCenter"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SeatbeltCenter"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ExtinguisherCenter"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FallsCenter"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PreventFallCenter"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ManageHeavyCenter"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RopeCrankingCenter"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".GasExplodeCenter"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ElectricityCenter"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CPRCenter"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AlcoNicoCenter"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".HeavyLiftingCenter"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

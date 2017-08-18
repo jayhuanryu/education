@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="p001subTitle">#000000</color>
+    <color name="textColor_black">#000000</color>
+    <color name="textcolor_Red">#E30000</color>
 </resources>
