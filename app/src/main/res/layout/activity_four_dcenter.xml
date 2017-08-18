@@ -151,7 +151,7 @@
                 android:id="@+id/img_start"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/img_check"
+                android:src="@drawable/img_proceed"
                 android:layout_centerInParent="true"/>
 
             <TextView
@@ -169,7 +169,7 @@
         <LinearLayout
             android:id="@+id/ll_4d_stop"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:orientation="horizontal"
             android:layout_weight="1"
             android:weightSum="3">
@@ -214,6 +214,20 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_4d_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_4d_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:textSize="20sp"
+            android:textColor="@color/textColor_black"/>
     </LinearLayout>
 
 

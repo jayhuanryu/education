@@ -54,8 +54,8 @@ public class CPRCenter extends AppCompatActivity {
             }
         });
 
-        String education = ReadFiles.readTextFile(this, "CPReducation.txt");
-        String gear = ReadFiles.readTextFile(this,"CPRgear.text");
+        String education = ReadFiles.readText(this, "CPReducation.txt");
+        String gear = ReadFiles.readText(this,"CPRgear.text");
 
         tv_education.setText(education);
         tv_gear.setText(gear);

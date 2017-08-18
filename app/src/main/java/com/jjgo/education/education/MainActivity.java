@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (et_pw1.getText().length() ==1 )
-                    et_pw2.setFocusable(true);
+                if (et_pw1.getText().length() > 1 )
+                    et_pw2.requestFocus();
             }
 
             @Override
@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(et_pw2.getText().length() == 1)
-                    et_pw3.setFocusable(true);
+                if(et_pw2.getText().length() > 0)
+                    et_pw3.requestFocus();
             }
 
             @Override
@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (et_pw3.getText().length() == 1)
-                    et_pw4.setFocusable(true);
+                if (et_pw3.getText().length() > 0)
+                    et_pw4.requestFocus();
             }
 
             @Override
