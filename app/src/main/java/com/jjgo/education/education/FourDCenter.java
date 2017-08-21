@@ -64,7 +64,7 @@ public class FourDCenter extends AppCompatActivity {
                     ll_content.setVisibility(View.GONE);
                     ll_start.setVisibility(View.GONE);
                 } else {
-                    startActivity(new Intent(FourDCenter.this, MainActivity.class));
+                    startActivity(new Intent(FourDCenter.this, Main.class));
                     finish();
                 }
             }
