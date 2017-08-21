@@ -79,7 +79,7 @@ public class SealedCenter extends AppCompatActivity {
                 ll_start.setVisibility(View.GONE);
                 ll_content.setVisibility(View.VISIBLE);
 
-                setPDF("sample.pdf");
+                setPDF("sealedEducation.pdf");
             }
         });
 
@@ -92,7 +92,7 @@ public class SealedCenter extends AppCompatActivity {
                 ll_start.setVisibility(View.GONE);
                 ll_content.setVisibility(View.VISIBLE);
 
-                setPDF("sample.pdf");
+                setPDF("sealedGear.pdf");
             }
         });
 

@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (et_pw1.getText().length() > 1 )
+                if (et_pw1.getText().length() > 0 )
                     et_pw2.requestFocus();
             }
 

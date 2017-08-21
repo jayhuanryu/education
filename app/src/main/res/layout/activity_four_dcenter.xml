@@ -160,7 +160,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_below="@+id/img_start"
                 android:layout_centerHorizontal="true"
-                android:text="준비"
+                android:text="시작"
                 android:textSize="30sp"
                 android:textColor="@color/textColor_black"/>
 

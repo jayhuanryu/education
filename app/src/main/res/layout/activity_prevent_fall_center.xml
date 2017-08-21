@@ -1,9 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/blue_background"
     tools:context="com.jjgo.education.education.PreventFallCenter">
 
-</android.support.constraint.ConstraintLayout>
+    <!--  상단 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/p001_ci" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:text="@string/p001_subtitle"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_back" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="@string/button_prevent_falling_center"
+        android:textColor="@color/textColor_black"
+        android:textSize="60sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_prevent_selection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_prevent_goso"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
+            android:layout_above="@+id/btn_prevent_chulgol"
+            android:layout_alignLeft="@+id/btn_prevent_chulgol"
+            android:layout_alignStart="@+id/btn_prevent_chulgol"
+            android:layout_marginBottom="212dp"
+            android:background="@drawable/button_background"
+            android:text="고소작업 교육 매뉴얼"
+            android:textColor="@color/textColor_black"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_prevent_chulgol"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="306dp"
+            android:layout_marginLeft="164dp"
+            android:layout_marginStart="164dp"
+            android:background="@drawable/button_background"
+            android:text="철골상부이동 교육 매뉴얼"
+            android:textColor="@color/textColor_black"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_prevent_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/textColor_black"
+            android:textStyle="bold"/>
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/prevent_pdf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</LinearLayout>
