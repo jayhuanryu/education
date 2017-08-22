@@ -71,7 +71,12 @@
             android:name=".HeavyLiftingCenter"
             android:screenOrientation="portrait" />
         <activity android:name=".SafetyShoeActivity" />
-        <activity android:name=".SafetyHelmetActivity"></activity>
+        <activity android:name=".SafetyHelmetActivity" />
+        <activity android:name=".PreventGasActivity" />
+        <activity android:name=".PreventExplosionActivity" />
+        <activity android:name=".OvercurrentAcitivty" />
+        <activity android:name=".AutopreventActivity" />
+        <activity android:name=".ElectricShockActivity"></activity>
     </application>
 
 </manifest>

@@ -1,9 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/blue_background"
     tools:context="com.jjgo.education.education.GasExplodeCenter">
 
-</android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/p001_ci" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:text="@string/p001_subtitle"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_back" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="@string/button_gas_explode_center"
+        android:textColor="@color/textColor_black"
+        android:textSize="60sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_crane_selection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_gas"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_background"
+            android:text="가스 사고 예방"
+            android:textColor="@color/textColor_black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_marginTop="208dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/btn_explode"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_background"
+            android:text="폭발 사고 예방"
+            android:textColor="@color/textColor_black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/btn_gas"
+            android:layout_alignLeft="@+id/btn_gas"
+            android:layout_alignStart="@+id/btn_gas"
+            android:layout_marginTop="228dp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/blue_background"
     tools:context="com.jjgo.education.education.CPRCenter">
 
     <!--  상단 -->
@@ -12,6 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         android:weightSum="4">
 
@@ -28,100 +30,124 @@
             android:layout_weight="2"
             android:gravity="center_vertical"
             android:text="@string/p001_subtitle"
+            android:textColor="#000000"
             android:textSize="30sp" />
 
-        <Button
-            android:id="@+id/btn_back"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:text="돌아가기" />
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_back"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
     </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/button_CPR_center"
+        android:textSize="60sp"
+        android:textColor="@color/textColor_black"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"/>
 
     <LinearLayout
         android:id="@+id/ll_cpr_first"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:weightSum="10">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8">
+
+            <ImageView
+                android:id="@+id/img_cpr"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:src="@drawable/img_cpr"
+                android:layout_centerInParent="true"/>
+
+
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
             android:orientation="horizontal"
+            android:layout_weight="1"
             android:weightSum="2">
 
             <Button
-                android:id="@+id/btn_educationManual"
+                android:id="@+id/btn_cpr_education"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/button_background"
+                android:layout_weight="1"
+                android:text="교육매뉴얼"
+                android:textSize="30sp"
+                android:textColor="@color/textColor_black"
+                android:textStyle="bold"/>
 
             <Button
-                android:id="@+id/btn_gearManual"
+                android:id="@+id/btn_cpr_gear"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/button_background"
+                android:layout_weight="1"
+                android:text="장비매뉴얼"
+                android:textSize="30sp"
+                android:textColor="@color/textColor_black"
+                android:textStyle="bold"/>
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/ll_cpr_education"
+        android:id="@+id/ll_cpr_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tv_cpr_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/CPR_education" />
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textColor="@color/textColor_black"
+            android:textStyle="bold"/>
 
-        <ScrollView
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/cpr_pdf"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv_education"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-        </ScrollView>
-
-
+            android:layout_height="match_parent"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/ll_cpr_gear"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/CPR_education" />
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv_gear"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-        </ScrollView>
-
-    </LinearLayout>
 
 
 </LinearLayout>
