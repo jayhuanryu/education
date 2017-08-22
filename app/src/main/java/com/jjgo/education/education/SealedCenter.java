@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
@@ -107,6 +108,23 @@ public class SealedCenter extends AppCompatActivity {
             }
         });
 
+
+        ll_stop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ll_first.setVisibility(View.VISIBLE);
+                ll_content.setVisibility(View.GONE);
+                ll_start.setVisibility(View.GONE);
+            }
+        });
+
+        imgStart = (ImageView)findViewById(R.id.img_start);
+        imgStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(SealedCenter.this, "Start Clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
     private void setPDF(String filename){

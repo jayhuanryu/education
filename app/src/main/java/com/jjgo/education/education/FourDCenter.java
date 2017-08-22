@@ -114,6 +114,15 @@ public class FourDCenter extends AppCompatActivity {
             }
         });
 
+        ll_stop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ll_first.setVisibility(View.VISIBLE);
+                ll_content.setVisibility(View.GONE);
+                ll_start.setVisibility(View.GONE);
+            }
+        });
+
     }
 
     private void formTextView(String text) {

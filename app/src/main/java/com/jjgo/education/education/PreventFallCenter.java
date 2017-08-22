@@ -62,6 +62,8 @@ public class PreventFallCenter extends AppCompatActivity {
                 setPDF("gosoEducation.pdf", "철골상부이동 교육 매뉴얼");
             }
         });
+
+
     }
 
     private void setPDF(String filename, String text) {
