@@ -1,0 +1,13 @@
+1. 경로설명
+
+txt파일과 pdf파일들은 모두
+app/src/main/assets
+에 저장 되어 있음
+
+이미지 파일들은 모두
+app/src/main/res/drawable
+에 저장 되어 있음
+
+멘트들은 모두
+app/src/main/res/values/strings.xml
+에 저장되어 있음.
