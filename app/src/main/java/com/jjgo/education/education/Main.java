@@ -16,6 +16,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
 
 
         /** Setting Button Attributes.. **/
+        findViewById(R.id.btn_back).setOnClickListener(this);
         findViewById(R.id.btn_4d_center).setOnClickListener(this);
         findViewById(R.id.btn_sealed_center).setOnClickListener(this);
         findViewById(R.id.btn_safety_center).setOnClickListener(this);
@@ -36,6 +37,8 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View view){
         switch (view.getId()) {
+            case R.id.btn_back:
+                startActivity(new Intent(this, UserSettingActivity.class));
             case R.id.btn_4d_center:
                 startActivity(new Intent(this, FourDCenter.class));
                 finish();

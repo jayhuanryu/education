@@ -45,7 +45,7 @@
                 android:layout_gravity="right"
                 android:gravity="right"
                 android:scaleType="fitXY"
-                android:src="@drawable/img_back"
+                android:src="@drawable/setting_btn"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
         </RelativeLayout>

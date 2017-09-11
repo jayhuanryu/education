@@ -9,16 +9,27 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
+    private PrefUtil prefUtil;
+    String password = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        prefUtil = new PrefUtil(this);
+
+        if(prefUtil.getPassword() == null)
+            password = getResources().getString(R.string.p001_pw);
+        else
+            password = prefUtil.getPassword();
 
         //View Attributes
         final EditText et_pw1 = (EditText)findViewById(R.id.et_pw1);
         final EditText et_pw2 = (EditText)findViewById(R.id.et_pw2);
         final EditText et_pw3 = (EditText)findViewById(R.id.et_pw3);
         final EditText et_pw4 = (EditText)findViewById(R.id.et_pw4);
+
+        final String[] password = {"0","0","0","0"};
 
         et_pw1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -28,13 +39,14 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (et_pw1.getText().length() > 0 )
+                if (et_pw1.getText().length() > 0 ) {
                     et_pw2.requestFocus();
+                }
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                    et_pw1.setText("*");
             }
         });
 
@@ -89,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 String combined = et_pw1.getText().toString() + et_pw2.getText().toString() + et_pw3.getText().toString() + et_pw4.getText().toString();
 
-                if (combined.equals(getResources().getString(R.string.p001_pw))) {
+                if (combined.equals(password)) {
                     Intent intent = new Intent(MainActivity.this, Main.class);
                     startActivity(intent);
                 }

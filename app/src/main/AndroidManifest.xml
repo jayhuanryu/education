@@ -76,7 +76,8 @@
         <activity android:name=".PreventExplosionActivity" />
         <activity android:name=".OvercurrentAcitivty" />
         <activity android:name=".AutopreventActivity" />
-        <activity android:name=".ElectricShockActivity"></activity>
+        <activity android:name=".ElectricShockActivity" />
+        <activity android:name=".UserSettingActivity"></activity>
     </application>
 
 </manifest>
