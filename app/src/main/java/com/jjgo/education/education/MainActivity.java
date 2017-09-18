@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText et_pw3 = (EditText)findViewById(R.id.et_pw3);
         final EditText et_pw4 = (EditText)findViewById(R.id.et_pw4);
 
-        final String[] password = {"0","0","0","0"};
+        final String[] passwordarray = {"0","0","0","0"};
 
         et_pw1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -46,7 +47,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                    et_pw1.setText("*");
+                passwordarray[0] = String.valueOf(s);
+                for (int i = 0 ; i < passwordarray.length; i++) {
+                    Log.d("JAY", "password array " + i + " : " + passwordarray[i]);
+                }
             }
         });
 
@@ -64,7 +68,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                passwordarray[1] = String.valueOf(s);
+                for (int i = 0 ; i < passwordarray.length; i++) {
+                    Log.d("JAY", "password array " + i + " : " + passwordarray[i]);
+                }
             }
         });
 
@@ -82,7 +89,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                passwordarray[2] = String.valueOf(s);
+                for (int i = 0 ; i < passwordarray.length; i++) {
+                    Log.d("JAY", "password array " + i + " : " + passwordarray[i]);
+                }
             }
         });
 
@@ -100,6 +110,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 String combined = et_pw1.getText().toString() + et_pw2.getText().toString() + et_pw3.getText().toString() + et_pw4.getText().toString();
+                Log.d("input password", combined);
+                Log.d("saved password", password);
 
                 if (combined.equals(password)) {
                     Intent intent = new Intent(MainActivity.this, Main.class);
