@@ -19,8 +19,10 @@ public class MainActivity extends AppCompatActivity {
 
         prefUtil = new PrefUtil(this);
 
-        if(prefUtil.getPassword() == null)
+        if(prefUtil.getPassword() == null) {
             password = getResources().getString(R.string.p001_pw);
+            prefUtil.setPassword(password);
+        }
         else
             password = prefUtil.getPassword();
 
@@ -116,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                 if (combined.equals(password)) {
                     Intent intent = new Intent(MainActivity.this, Main.class);
                     startActivity(intent);
+                    finish();
                 }
             }
         });

@@ -39,6 +39,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
         switch (view.getId()) {
             case R.id.btn_back:
                 startActivity(new Intent(this, UserSettingActivity.class));
+                break;
             case R.id.btn_4d_center:
                 startActivity(new Intent(this, FourDCenter.class));
                 finish();

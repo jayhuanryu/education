@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,10 +48,15 @@ public class UserSettingActivity extends AppCompatActivity implements View.OnCli
             case R.id.btn_setting_edit:
                 boolean pwcheck = false;
                 boolean pwmatch = false;
+                Log.d("prefUtil password : " , prefUtil.getPassword().toString());
                 if(etOldPw.getText().toString().equals(prefUtil.getPassword()))
                     pwcheck = true;
                 if(etNewPw.getText().toString().equals(etPwCheck.getText().toString()))
                     pwmatch = true;
+
+                Log.d("old pw : " , etOldPw.getText().toString());
+                Log.d("new pw : " , etNewPw.getText().toString());
+                Log.d("check pw : " , etPwCheck.getText().toString());
 
                 if(pwcheck && pwmatch) {
                     prefUtil.setPassword(etNewPw.getText().toString());
@@ -63,31 +69,38 @@ public class UserSettingActivity extends AppCompatActivity implements View.OnCli
                             finish();
                         }
                     });
+                    builder.create().show();
                 } else if (pwcheck) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setTitle("알림");
-                    builder.setMessage("비밀번호가 틀렸습니다.");
+                    builder.setMessage("비밀번호가 틀렸습니다. \n 다시 입력해주세요");
                     builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-
+                            etNewPw.setText("");
+                            etOldPw.setText("");
+                            etPwCheck.setText("");
+                            etOldPw.requestFocus();
                         }
                     });
+                    builder.create().show();
                 } else if (pwmatch) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setTitle("알림");
-                    builder.setMessage("새로운 비밀번호가 일치하지 않습니다.");
+                    builder.setMessage("새로운 비밀번호가 일치하지 않습니다. \n 다시 입력해주세요");
                     builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-
+                            etNewPw.setText("");
+                            etOldPw.setText("");
+                            etPwCheck.setText("");
+                            etOldPw.requestFocus();
                         }
                     });
                 }
                 break;
             case R.id.btn_setting_cancel:
                 finish();
-                break;
             case R.id.img_back:
                 finish();
                 break;

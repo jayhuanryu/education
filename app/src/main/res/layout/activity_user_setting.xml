@@ -56,6 +56,7 @@
         android:layout_height="wrap_content"
         android:text="비밀번호설정"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
         android:gravity="center_horizontal"
         android:textColor="@color/textColor_black"
         android:textSize="30sp"/>
@@ -63,7 +64,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="40dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,69 +75,94 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="기존 비밀번호"/>
+                android:text="기존 비밀번호"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/et_setting_oldpw"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:inputType="textPassword"
+                android:layout_weight="1"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="30dp"
             android:weightSum="2">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="신규비밀번호"/>
+                android:text="신규비밀번호"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/et_setting_newpw"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:inputType="textPassword"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="30dp"
             android:weightSum="2">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="비밀번호확인"/>
+                android:text="비밀번호확인"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/et_setting_pwcheck"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:inputType="textPassword"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="30dp"
             android:weightSum="2">
             <Button
                 android:id="@+id/btn_setting_edit"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="수정"/>
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/button_background"
+                android:text="수정"
+                android:textColor="#000000"
+                android:textSize="30sp"/>
 
             <Button
                 android:id="@+id/btn_setting_cancel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="취소"/>
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/button_background"
+                android:text="취소"
+                android:textColor="#000000"
+                android:textSize="30sp"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
