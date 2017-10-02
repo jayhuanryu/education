@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/blue_background"
     android:orientation="vertical"
-    tools:context="com.jjgo.education.education.SeatbeltCenter">
+    tools:context="com.jjgo.education.education.Menu3Activity">
 
     <!--  상단 -->
 

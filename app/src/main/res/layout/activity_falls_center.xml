@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/blue_background"
-    tools:context="com.jjgo.education.education.FallsCenter">
+    tools:context="com.jjgo.education.education.Menu5Activity">
 
     <!--  상단 -->
 

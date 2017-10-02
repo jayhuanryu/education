@@ -79,7 +79,7 @@ public class SafetyCenter extends AppCompatActivity {
         btnShoes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SafetyCenter.this, SafetyShoeActivity.class));
+                startActivity(new Intent(SafetyCenter.this, Menu2Activity.class));
                 finish();
             }
         });

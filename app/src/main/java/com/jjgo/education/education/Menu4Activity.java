@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
-public class ExtinguisherCenter extends AppCompatActivity {
+public class Menu4Activity extends AppCompatActivity {
 
     private PDFView pdfView;
 
@@ -42,7 +42,7 @@ public class ExtinguisherCenter extends AppCompatActivity {
         ll_stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ExtinguisherCenter.this, "stop clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Menu4Activity.this, "stop clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -61,7 +61,7 @@ public class ExtinguisherCenter extends AppCompatActivity {
                     ll_content.setVisibility(View.GONE);
                     ll_start.setVisibility(View.GONE);
                 } else {
-                    startActivity(new Intent(ExtinguisherCenter.this, Main.class));
+                    startActivity(new Intent(Menu4Activity.this, Main.class));
                     finish();
                 }
             }
@@ -80,7 +80,7 @@ public class ExtinguisherCenter extends AppCompatActivity {
         imgStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ExtinguisherCenter.this, "clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Menu4Activity.this, "clicked", Toast.LENGTH_SHORT).show();
             }
         });
 

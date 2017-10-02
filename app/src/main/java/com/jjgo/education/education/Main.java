@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 public class Main extends AppCompatActivity implements View.OnClickListener {
 
@@ -45,7 +44,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
                 finish();
                 break;
             case R.id.btn_sealed_center:
-                startActivity(new Intent(this, SealedCenter.class));
+                startActivity(new Intent(this, Menu1Activity.class));
                 finish();
                 break;
             case R.id.btn_safety_center:
@@ -53,15 +52,15 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
                 finish();
                 break;
             case R.id.btn_seatbelt_center:
-                startActivity(new Intent(this, SeatbeltCenter.class));
+                startActivity(new Intent(this, Menu3Activity.class));
                 finish();
                 break;
             case R.id.btn_extinguisher_center:
-                startActivity(new Intent(this, ExtinguisherCenter.class));
+                startActivity(new Intent(this, Menu4Activity.class));
                 finish();
                 break;
             case R.id.btn_falls_center:
-                startActivity(new Intent(this, FallsCenter.class));
+                startActivity(new Intent(this, Menu5Activity.class));
                 finish();
                 break;
             case R.id.btn_prevent_falling_center:

@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@drawable/blue_background"
     android:layout_height="match_parent"
-    tools:context="com.jjgo.education.education.ExtinguisherCenter">
+    tools:context="com.jjgo.education.education.Menu4Activity">
 
     <!--  상단 -->
 

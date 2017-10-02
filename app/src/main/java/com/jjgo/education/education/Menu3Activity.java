@@ -1,7 +1,6 @@
 package com.jjgo.education.education;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +11,7 @@ import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
-public class SeatbeltCenter extends AppCompatActivity {
+public class Menu3Activity extends AppCompatActivity {
 
     private LinearLayout ll_ready;
     private LinearLayout ll_start;
@@ -44,7 +43,7 @@ public class SeatbeltCenter extends AppCompatActivity {
         ll_stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(SeatbeltCenter.this, "Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Menu3Activity.this, "Clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -61,7 +60,7 @@ public class SeatbeltCenter extends AppCompatActivity {
                     ll_start.setVisibility(View.GONE);
                     ll_content.setVisibility(View.GONE);
                 } else {
-                    startActivity(new Intent(SeatbeltCenter.this, Main.class));
+                    startActivity(new Intent(Menu3Activity.this, Main.class));
                     finish();
                 }
             }
@@ -97,7 +96,7 @@ public class SeatbeltCenter extends AppCompatActivity {
         imgUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(SeatbeltCenter.this, "Up clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Menu3Activity.this, "Up clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -105,7 +104,7 @@ public class SeatbeltCenter extends AppCompatActivity {
         imgDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(SeatbeltCenter.this, "Down Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Menu3Activity.this, "Down Clicked", Toast.LENGTH_SHORT).show();
             }
         });
 

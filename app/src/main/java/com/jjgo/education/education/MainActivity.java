@@ -1,6 +1,8 @@
 package com.jjgo.education.education;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -119,6 +121,20 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, Main.class);
                     startActivity(intent);
                     finish();
+                } else {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setTitle("알림");
+                    builder.setMessage("비밀번호가 틀렸습니다. 재입력 하시겠습니까?");
+                    builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            et_pw1.setText("");
+                            et_pw2.setText("");
+                            et_pw3.setText("");
+                            et_pw4.setText("");
+                            et_pw1.requestFocus();
+                        }
+                    });
                 }
             }
         });

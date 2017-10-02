@@ -8,17 +8,22 @@
 
 
     <!-- 메인페이지 버튼 이름들 -->
+    <string name="button_menu1">밀폐공간작업 체험</string>
+    <string name="button_menu2">개인보호구 착용 체험</string>
+    <string name="button_menu3">안전벨트 체험장</string>
+    <string name="button_menu4">화재사고 예방 체험</string>
+    <string name="button_menu5">낙하물사고 예방 체험</string>
+    <string name="button_menu6">종합가설 안전 체험</string>
+    <string name="button_menu7">중장비 관리 체험장</string>
+    <string name="button_menu8">줄걸이 체험장</string>
+    <string name="button_menu9">화학물질/폭발사고 예방체험</string>
     <string name="button_4d_center">4D 체험장</string>
-    <string name="button_sealed_center">밀폐공간 체험장</string>
-    <string name="button_safety_center">안전화/안전모 체험장</string>
-    <string name="button_seatbelt_center">안전벨트 체험장</string>
-    <string name="button_extinguisher_center">소화기 체험장</string>
-    <string name="button_falls_center">낙하물 체험장</string>
+
     <string name="button_prevent_falling_center">추락사고 예방 체험장</string>
-    <string name="button_manage_heavy_center">중장비 관리 체험장</string>
-    <string name="button_rope_cranking_center">줄걸이 체험장</string>
+
+
     <string name="button_gas_explode_center">가스/폭발사고 예방</string>
-    <string name="button_electricity_center">전기사고 예방</string>
+    <string name="button_menu11">전기사고 예방</string>
     <string name="button_CPR_center">심폐소생술 체험장</string>
     <string name="button_alco_nico_center">음주/흡연 체험장</string>
     <string name="button_heavy_lifting_center">중량물 들기 체험장</string>

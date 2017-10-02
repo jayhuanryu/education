@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-public class SafetyShoeActivity extends AppCompatActivity {
+public class Menu2Activity extends AppCompatActivity {
 
     private RelativeLayout rl_start;
     private RelativeLayout rl_awl;
@@ -31,7 +31,7 @@ public class SafetyShoeActivity extends AppCompatActivity {
         ll_stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(SafetyShoeActivity.this, "stop clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Menu2Activity.this, "stop clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -52,7 +52,7 @@ public class SafetyShoeActivity extends AppCompatActivity {
                     rl_hammer.setVisibility(View.GONE);
                     rl_start.setVisibility(View.VISIBLE);
                 } else {
-                    startActivity(new Intent(SafetyShoeActivity.this, SafetyCenter.class));
+                    startActivity(new Intent(Menu2Activity.this, SafetyCenter.class));
                     finish();
                 }
             }
@@ -82,7 +82,7 @@ public class SafetyShoeActivity extends AppCompatActivity {
         imgHammer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(SafetyShoeActivity.this, "click", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Menu2Activity.this, "click", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -3,17 +3,15 @@ package com.jjgo.education.education;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
-public class SealedCenter extends AppCompatActivity {
+public class Menu1Activity extends AppCompatActivity {
 
     //Image Attributes
     private ImageView imgBack;
@@ -64,7 +62,7 @@ public class SealedCenter extends AppCompatActivity {
                     ll_content.setVisibility(View.GONE);
                     ll_start.setVisibility(View.GONE);
                 } else {
-                    startActivity(new Intent(SealedCenter.this, Main.class));
+                    startActivity(new Intent(Menu1Activity.this, Main.class));
                     finish();
                 }
             }
@@ -122,7 +120,7 @@ public class SealedCenter extends AppCompatActivity {
         imgStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(SealedCenter.this, "Start Clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Menu1Activity.this, "Start Clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
