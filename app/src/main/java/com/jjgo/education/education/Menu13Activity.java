@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
@@ -17,6 +18,7 @@ public class Menu13Activity extends AppCompatActivity {
     /** View Attributes **/
     private ImageView imgBack;
     private PDFView pdfView;
+    private TextView pdfTitle;
     private LinearLayout ll_content;
     private RelativeLayout rl_first;
 
@@ -27,6 +29,8 @@ public class Menu13Activity extends AppCompatActivity {
 
 
         pdfView = (PDFView) findViewById(R.id.bone_pdf);
+        pdfTitle = (TextView)findViewById(R.id.tv_bone_title);
+
         ll_content = (LinearLayout)findViewById(R.id.ll_bone_content);
         rl_first = (RelativeLayout)findViewById(R.id.rl_bone_selection);
 
@@ -47,7 +51,7 @@ public class Menu13Activity extends AppCompatActivity {
         findViewById(R.id.btn_bone_gear).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setPDF("menu13Education.pdf");
+                setPDF("menu13EGear.pdf");
             }
         });
 
@@ -58,13 +62,25 @@ public class Menu13Activity extends AppCompatActivity {
         rl_first.setVisibility(GONE);
         ll_content.setVisibility(View.VISIBLE);
 
+        if (filelname.contains("Gear"))
+            pdfTitle.setText("장비메뉴얼");
+        else
+            pdfTitle.setText("교육메뉴얼");
+
         pdfView.fromAsset(filelname).load();
 
     }
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(Menu13Activity.this, Main.class));
-        finish();
+
+        if(rl_first.getVisibility() == View.VISIBLE) {
+            startActivity(new Intent(Menu13Activity.this, Main.class));
+            finish();
+        } else {
+            rl_first.setVisibility(View.VISIBLE);
+            ll_content.setVisibility(GONE);
+        }
+
     }
 }

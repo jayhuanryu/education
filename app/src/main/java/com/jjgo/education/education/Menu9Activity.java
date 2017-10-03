@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
@@ -27,12 +28,14 @@ public class Menu9Activity extends AppCompatActivity {
     private ImageView imgBack;
 
     private PDFView pdfView;
+    private TextView pdfTitle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu9);
 
         pdfView = (PDFView) findViewById(R.id.chemcial_pdf);
+        pdfTitle = (TextView)findViewById(R.id.tv_title);
 
         ll_first = (LinearLayout) findViewById(R.id.ll_chemical_first);
         ll_start = (LinearLayout) findViewById(R.id.ll_chemical_start);
@@ -89,14 +92,14 @@ public class Menu9Activity extends AppCompatActivity {
         btnChemicalEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setPDF("heaequipmentEducation.pdf");
+                setPDF("menu9Education.pdf");
             }
         });
         btnChemicalGear = (Button)findViewById(R.id.btn_chemical_gear);
         btnChemicalGear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setPDF("heavyequipmentGear.pdf");
+                setPDF("menu9Gear.pdf");
             }
         });
     }
@@ -105,6 +108,11 @@ public class Menu9Activity extends AppCompatActivity {
         ll_first.setVisibility(GONE);
         ll_content.setVisibility(View.VISIBLE);
         ll_start.setVisibility(GONE);
+
+        if (filelname.contains("Gear"))
+            pdfTitle.setText("장비메뉴얼");
+        else
+            pdfTitle.setText("교육메뉴얼");
 
         pdfView.fromAsset(filelname).load();
 

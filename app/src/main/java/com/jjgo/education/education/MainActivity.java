@@ -14,6 +14,14 @@ public class MainActivity extends AppCompatActivity {
 
     private PrefUtil prefUtil;
     String password = "";
+
+    EditText et_pw1;
+    EditText et_pw2;
+    EditText et_pw3;
+    EditText et_pw4;
+
+    String[] passwordarray = {"0","0","0","0"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,12 +37,12 @@ public class MainActivity extends AppCompatActivity {
             password = prefUtil.getPassword();
 
         //View Attributes
-        final EditText et_pw1 = (EditText)findViewById(R.id.et_pw1);
-        final EditText et_pw2 = (EditText)findViewById(R.id.et_pw2);
-        final EditText et_pw3 = (EditText)findViewById(R.id.et_pw3);
-        final EditText et_pw4 = (EditText)findViewById(R.id.et_pw4);
+        et_pw1 = (EditText)findViewById(R.id.et_pw1);
+        et_pw2 = (EditText)findViewById(R.id.et_pw2);
+        et_pw3 = (EditText)findViewById(R.id.et_pw3);
+        et_pw4 = (EditText)findViewById(R.id.et_pw4);
 
-        final String[] passwordarray = {"0","0","0","0"};
+
 
         et_pw1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -114,36 +122,43 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 String combined = et_pw1.getText().toString() + et_pw2.getText().toString() + et_pw3.getText().toString() + et_pw4.getText().toString();
-                Log.d("input password", combined);
-                Log.d("saved password", password);
-
-                if (combined.equals(password)) {
-                    Intent intent = new Intent(MainActivity.this, Main.class);
-                    startActivity(intent);
-                    finish();
-                } else {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                    builder.setTitle("알림");
-                    builder.setMessage("비밀번호가 틀렸습니다. 재입력 하시겠습니까?");
-                    builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            et_pw1.setText("");
-                            et_pw2.setText("");
-                            et_pw3.setText("");
-                            et_pw4.setText("");
-                            et_pw1.requestFocus();
-
-                            password = "";
-                            for (int i = 0 ; i < passwordarray.length; i++) {
-                                passwordarray[i] = "0";
-                            }
-                        }
-                    });
-                    builder.create().show();
+                if (getCurrentFocus() == et_pw4) {
+                    checkValidPassword(combined);
                 }
             }
         });
 
+    }
+
+    private void checkValidPassword(String combined) {
+
+        Log.d("input password", combined);
+        Log.d("saved password", password);
+
+        if (combined.equals(password)) {
+            Intent intent = new Intent(MainActivity.this, Main.class);
+            startActivity(intent);
+            finish();
+        } else {
+            onPassWordWrong();
+        }
+    }
+
+    private void onPassWordWrong() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("알림");
+        builder.setMessage("비밀번호가 틀렸습니다. 재입력 하시겠습니까?");
+        builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                et_pw1.setText("");
+                et_pw2.setText("");
+                et_pw3.setText("");
+                et_pw1.requestFocus();
+                et_pw4.setText("");
+
+            }
+        });
+        builder.create().show();
     }
 }

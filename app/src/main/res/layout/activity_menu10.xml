@@ -49,6 +49,14 @@
                 android:src="@drawable/img_back"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_back"
+                android:text="돌아가기"
+                android:textColor="@color/textColor_black"
+                android:layout_centerHorizontal="true"/>
         </RelativeLayout>
     </LinearLayout>
 
@@ -181,13 +189,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
+                android:gravity="end|center_vertical"
                 android:layout_weight="1"
                 android:text="긴급"
                 android:textSize="60sp"
                 android:textColor="@color/textcolor_Red"
                 android:textStyle="bold"/>
 
-            <Button
+            <ImageView
                 android:id="@+id/btn_stop"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -203,6 +212,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_weight="1"
+                android:gravity="start|center_vertical"
                 android:text="정지"
                 android:textSize="60sp"
                 android:textColor="@color/textcolor_Red"
@@ -221,21 +231,26 @@
         android:id="@+id/ll_gas_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/tv_title"
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
             android:textSize="20sp"
             android:textColor="@color/textColor_black"
-            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
         <com.github.barteksc.pdfviewer.PDFView
-            android:id="@+id/equipment_pdf"
+            android:id="@+id/gas_pdf"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"/>
     </LinearLayout>
+
 
 
 </LinearLayout>

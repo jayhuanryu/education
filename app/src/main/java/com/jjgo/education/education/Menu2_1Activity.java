@@ -25,7 +25,7 @@ public class Menu2_1Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_safety_shoe);
+        setContentView(R.layout.activity_menu2_1);
 
         ll_stop = (LinearLayout) findViewById(R.id.ll_shoes_stop);
         ll_stop.setOnClickListener(new View.OnClickListener() {

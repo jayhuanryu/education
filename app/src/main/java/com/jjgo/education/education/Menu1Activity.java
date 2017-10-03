@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
@@ -30,6 +31,7 @@ public class Menu1Activity extends AppCompatActivity {
     private LinearLayout ll_stop;
 
     //Text Attributes;
+    private TextView pdfTitle;
     private PDFView pdfView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,7 @@ public class Menu1Activity extends AppCompatActivity {
 
         //PDF content
         pdfView = (PDFView) findViewById(R.id.pdf_sealed);
+        pdfTitle = (TextView) findViewById(R.id.tv_pdf_title);
 
 
 
@@ -115,6 +118,11 @@ public class Menu1Activity extends AppCompatActivity {
 
     }
     private void setPDF(String filename){
+        if (filename.contains("Education"))
+            pdfTitle.setText("교육매뉴얼");
+        else
+            pdfTitle.setText("장비매뉴얼");
+
         pdfView.fromAsset(filename).load();
     }
 

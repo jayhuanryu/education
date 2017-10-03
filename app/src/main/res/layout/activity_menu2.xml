@@ -48,6 +48,14 @@
                 android:gravity="right"
                 android:scaleType="fitXY"
                 android:src="@drawable/img_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_back"
+                android:text="돌아가기"
+                android:textColor="@color/textColor_black"
+                android:layout_centerHorizontal="true"/>
         </RelativeLayout>
     </LinearLayout>
 
@@ -143,12 +151,24 @@
         android:id="@+id/ll_safety_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
         android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_pdf_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="30dp"
+            android:textColor="@color/textColor_black"/>
+
 
         <com.github.barteksc.pdfviewer.PDFView
             android:id="@+id/pdf_safety"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"/>
     </LinearLayout>
 
 

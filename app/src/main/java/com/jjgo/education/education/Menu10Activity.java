@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
@@ -27,6 +28,7 @@ public class Menu10Activity extends AppCompatActivity {
     private ImageView imgBack;
 
     private PDFView pdfView;
+    private TextView pdfTitle;
 
 
     @Override
@@ -34,6 +36,7 @@ public class Menu10Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu10);
         pdfView = (PDFView) findViewById(R.id.gas_pdf);
+        pdfTitle = (TextView)findViewById(R.id.tv_title);
 
         ll_first = (LinearLayout) findViewById(R.id.ll_gas_first);
         ll_start = (LinearLayout) findViewById(R.id.ll_gas_start);
@@ -106,6 +109,11 @@ public class Menu10Activity extends AppCompatActivity {
         ll_first.setVisibility(GONE);
         ll_content.setVisibility(View.VISIBLE);
         ll_start.setVisibility(GONE);
+
+        if(filelname.contains("Gear"))
+            pdfTitle.setText("장비메뉴얼");
+        else
+            pdfTitle.setText("교육메뉴얼");
 
         pdfView.fromAsset(filelname).load();
 

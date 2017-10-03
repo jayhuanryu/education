@@ -22,7 +22,7 @@ public class Menu2_2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_safety_helmet);
+        setContentView(R.layout.activity_menu2_2);
 
         rl_ready = (RelativeLayout) findViewById(R.id.rl_helmet_ready);
         rl_start = (RelativeLayout) findViewById(R.id.rl_helmet_start);

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
@@ -14,6 +15,7 @@ import com.github.barteksc.pdfviewer.PDFView;
 public class Menu4Activity extends AppCompatActivity {
 
     private PDFView pdfView;
+    private TextView pdfTitle;
 
     private LinearLayout ll_first;
     private LinearLayout ll_start;
@@ -46,24 +48,15 @@ public class Menu4Activity extends AppCompatActivity {
             }
         });
 
+
         pdfView = (PDFView) findViewById(R.id.extinguisher_pdf);
+        pdfTitle = (TextView) findViewById(R.id.tv_pdf_title);
 
         imgBack = (ImageView)findViewById(R.id.img_back);
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ll_content.getVisibility() == View.VISIBLE) {
-                    ll_first.setVisibility(View.VISIBLE);
-                    ll_content.setVisibility(View.GONE);
-                    ll_start.setVisibility(View.GONE);
-                } else if (ll_start.getVisibility() == View.VISIBLE) {
-                    ll_first.setVisibility(View.VISIBLE);
-                    ll_content.setVisibility(View.GONE);
-                    ll_start.setVisibility(View.GONE);
-                } else {
-                    startActivity(new Intent(Menu4Activity.this, Main.class));
-                    finish();
-                }
+               onBackPressed();
             }
         });
 
@@ -116,6 +109,27 @@ public class Menu4Activity extends AppCompatActivity {
         ll_first.setVisibility(View.GONE);
         ll_start.setVisibility(View.GONE);
 
+        if (filename.contains("Gear"))
+            pdfTitle.setText("장비매뉴얼");
+        else
+            pdfTitle.setText("교육매뉴얼");
+
         pdfView.fromAsset(filename).load();
+    }
+
+    @Override
+    public void onBackPressed(){
+        if(ll_content.getVisibility() == View.VISIBLE) {
+            ll_first.setVisibility(View.VISIBLE);
+            ll_content.setVisibility(View.GONE);
+            ll_start.setVisibility(View.GONE);
+        } else if (ll_start.getVisibility() == View.VISIBLE) {
+            ll_first.setVisibility(View.VISIBLE);
+            ll_content.setVisibility(View.GONE);
+            ll_start.setVisibility(View.GONE);
+        } else {
+            startActivity(new Intent(Menu4Activity.this, Main.class));
+            finish();
+        }
     }
 }

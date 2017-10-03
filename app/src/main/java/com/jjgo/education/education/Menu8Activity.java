@@ -26,6 +26,7 @@ public class Menu8Activity extends AppCompatActivity {
 
     private LinearLayout ll_content;
     private LinearLayout ll_first;
+    private LinearLayout ll_item;
     private RelativeLayout rl_move_content;
     private LinearLayout ll_stop;
     private PDFView pdfView;
@@ -40,6 +41,7 @@ public class Menu8Activity extends AppCompatActivity {
         ll_first = (LinearLayout)findViewById(R.id.rl_crane_selection);
         ll_content = (LinearLayout) findViewById(R.id.ll_crane_content);
         rl_move_content = (RelativeLayout) findViewById(R.id.ll_moving_content);
+        ll_item = (LinearLayout) findViewById(R.id.ll_crane_item);
         img_check = (ImageView)findViewById(R.id.img_falls_check);
         ll_stop = (LinearLayout)findViewById(R.id.ll_stop);
         imgUp = (ImageView)findViewById(R.id.img_up);
@@ -83,8 +85,8 @@ public class Menu8Activity extends AppCompatActivity {
         btnEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv_title.setText("교육 매뉴얼");
-                setPDF("craneEducation.pdf");
+                tv_title.setText("교육메뉴얼");
+                setPDF("menu8Education.pdf");
             }
         });
 
@@ -92,14 +94,15 @@ public class Menu8Activity extends AppCompatActivity {
         btnGear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv_title.setText("장비 매뉴얼");
-                setPDF("craneGear.pdf");
+                tv_title.setText("장비메뉴얼");
+                setPDF("menu8Gear.pdf");
             }
         });
     }
 
     private void setPDF(String filename) {
         ll_content.setVisibility(View.VISIBLE);
+        ll_item.setVisibility(GONE);
         ll_first.setVisibility(GONE);
 
         pdfView.fromAsset(filename).load();
@@ -107,7 +110,7 @@ public class Menu8Activity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        if (ll_content.getVisibility() == View.VISIBLE) {
+        if (ll_first.getVisibility() != View.VISIBLE) {
             ll_first.setVisibility(View.VISIBLE);
             ll_content.setVisibility(GONE);
             rl_move_content.setVisibility(GONE);

@@ -78,6 +78,7 @@
                 android:background="@drawable/button_background"
                 android:text="@string/button_menu1"
                 android:textColor="#000000"
+                android:textStyle="bold"
                 android:textSize="30sp" />
 
 
@@ -88,6 +89,7 @@
                 android:background="@drawable/button_background"
                 android:text="@string/button_menu2"
                 android:textColor="#000000"
+                android:textStyle="bold"
                 android:textSize="30sp" />
 
         </TableRow>
@@ -101,6 +103,7 @@
                 android:background="@drawable/button_background"
                 android:text="@string/button_menu3"
                 android:textColor="#000000"
+                android:textStyle="bold"
                 android:textSize="30sp" />
 
             <Button
@@ -110,6 +113,7 @@
                 android:background="@drawable/button_background"
                 android:text="@string/button_menu4"
                 android:textColor="#000000"
+                android:textStyle="bold"
                 android:textSize="30sp" />
 
 
@@ -124,6 +128,7 @@
                 android:background="@drawable/button_background"
                 android:text="@string/button_menu5"
                 android:textColor="#000000"
+                android:textStyle="bold"
                 android:textSize="30sp" />
 
             <Button
@@ -132,6 +137,7 @@
                 android:layout_marginRight="40dp"
                 android:background="@drawable/button_background"
                 android:text="@string/button_menu6"
+                android:textStyle="bold"
                 android:textColor="#000000"
                 android:textSize="30sp" />
 
@@ -146,6 +152,7 @@
                 android:layout_marginRight="40dp"
                 android:background="@drawable/button_background"
                 android:text="@string/button_menu7"
+                android:textStyle="bold"
                 android:textColor="#000000"
                 android:textSize="30sp" />
 
@@ -157,6 +164,7 @@
                 android:background="@drawable/button_background"
                 android:text="@string/button_menu8"
                 android:textColor="#000000"
+                android:textStyle="bold"
                 android:textSize="30sp" />
 
 
@@ -172,6 +180,7 @@
                 android:background="@drawable/button_background"
                 android:text="@string/button_menu9"
                 android:textColor="#000000"
+                android:textStyle="bold"
                 android:textSize="30sp" />
 
 
@@ -181,6 +190,7 @@
                 android:layout_marginRight="40dp"
                 android:background="@drawable/button_background"
                 android:text="@string/button_menu10"
+                android:textStyle="bold"
                 android:textColor="#000000"
                 android:textSize="30sp" />
         </TableRow>
@@ -194,6 +204,7 @@
                 android:background="@drawable/button_background"
                 android:text="@string/button_menu11"
                 android:textColor="#000000"
+                android:textStyle="bold"
                 android:textSize="30sp" />
 
             <Button
@@ -203,6 +214,7 @@
                 android:background="@drawable/button_background"
                 android:text="@string/button_menu12"
                 android:textColor="#000000"
+                android:textStyle="bold"
                 android:textSize="30sp" />
         </TableRow>
 
@@ -216,6 +228,7 @@
                 android:background="@drawable/button_background"
                 android:text="@string/button_menu13"
                 android:textColor="#000000"
+                android:textStyle="bold"
                 android:textSize="30sp" />
         </TableRow>
     </TableLayout>

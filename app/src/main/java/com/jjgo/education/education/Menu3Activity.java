@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
@@ -22,11 +23,13 @@ public class Menu3Activity extends AppCompatActivity {
     private ImageView imgReady;
     private ImageView imgUp;
     private ImageView imgDown;
+    private ImageView imgDrop;
 
     private Button btnEducation;
     private Button btnGear;
 
     private PDFView pdfView;
+    private TextView pdfTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class Menu3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_menu3);
 
         pdfView = (PDFView)findViewById(R.id.pdf_seatbelt);
+        pdfTitle = (TextView)findViewById(R.id.tv_pdf_title);
 
         ll_ready = (LinearLayout) findViewById(R.id.ll_seatbelt_first);
         ll_start = (LinearLayout) findViewById(R.id.ll_seatbelt_start);
@@ -51,15 +55,17 @@ public class Menu3Activity extends AppCompatActivity {
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                onBackPressed();
             }
         });
+
+        imgDrop = (ImageView) findViewById(R.id.img_drop);
 
         btnEducation = (Button) findViewById(R.id.btn_seatbelt_education);
         btnEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setPDF("seatbeltEducation.pdf");
+                setPDF("menu3Education.pdf");
             }
         });
 
@@ -67,7 +73,7 @@ public class Menu3Activity extends AppCompatActivity {
         btnGear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setPDF("seatbeltGear.pdf");
+                setPDF("menu3Gear.pdf");
             }
         });
 
@@ -112,6 +118,11 @@ public class Menu3Activity extends AppCompatActivity {
         ll_content.setVisibility(View.VISIBLE);
         ll_start.setVisibility(View.GONE);
         ll_ready.setVisibility(View.GONE);
+
+        if (filename.contains("Gear"))
+            pdfTitle.setText("장비매뉴얼");
+        else
+            pdfTitle.setText("교육매뉴얼");
 
         pdfView.fromAsset(filename).load();
     }

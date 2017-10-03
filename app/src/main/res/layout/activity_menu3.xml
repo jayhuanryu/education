@@ -48,6 +48,14 @@
                 android:gravity="right"
                 android:scaleType="fitXY"
                 android:src="@drawable/img_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_back"
+                android:text="돌아가기"
+                android:textColor="@color/textColor_black"
+                android:layout_centerHorizontal="true"/>
         </RelativeLayout>
     </LinearLayout>
 
@@ -159,25 +167,23 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="end">
+                    android:gravity="center_horizontal">
 
                     <ImageView
                         android:id="@+id/img_seatbelt_up"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:layout_marginTop="100dp"
-                        android:layout_gravity="center_horizontal"
-                        android:gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
                         android:src="@drawable/img_up" />
 
                     <TextView
                         android:id="@+id/tv_ascend"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
                         android:layout_below="@+id/img_seatbelt_up"
-                        android:gravity="end"
                         android:text="상승"
                         android:textColor="@color/textColor_black"
                         android:textSize="30sp" />
@@ -186,18 +192,18 @@
                         android:id="@+id/img_seatbelt_down"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
                         android:src="@drawable/img_down"
                         android:layout_below="@id/tv_ascend"
-                        android:layout_gravity="center_horizontal"
-                        android:gravity="center_horizontal"/>
+                        android:layout_centerHorizontal="true"/>
 
                     <TextView
                         android:id="@+id/tv_descend"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
                         android:layout_below="@id/img_seatbelt_down"
-                        android:layout_marginTop="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
                         android:text="하강"
                         android:textColor="@color/textColor_black"
                         android:textSize="30sp" />
@@ -221,6 +227,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/img_drop"
                         android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
                         android:text="추락"
                         android:textColor="@color/textColor_black"
                         android:textSize="30sp"/>
@@ -244,18 +251,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:gravity="center_vertical|end"
                 android:layout_weight="1"
                 android:text="긴급"
                 android:textColor="@color/textcolor_Red"
                 android:textSize="60sp"
                 android:textStyle="bold" />
 
-            <Button
+            <ImageView
                 android:id="@+id/btn_stop"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:scaleType="centerCrop"
                 android:layout_weight="1"
                 android:background="@drawable/img_power" />
 
@@ -265,6 +274,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:gravity="start|center_vertical"
                 android:layout_weight="1"
                 android:text="정지"
                 android:textColor="@color/textcolor_Red"
@@ -283,12 +293,23 @@
     <LinearLayout
         android:id="@+id/ll_seatbelt_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_pdf_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="30dp"
+            android:textColor="@color/textColor_black"/>
 
         <com.github.barteksc.pdfviewer.PDFView
             android:id="@+id/pdf_seatbelt"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"/>
     </LinearLayout>
 
 

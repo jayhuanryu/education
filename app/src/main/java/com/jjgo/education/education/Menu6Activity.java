@@ -37,13 +37,7 @@ public class Menu6Activity extends AppCompatActivity {
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ll_content.getVisibility() == View.VISIBLE) {
-                    rl_first.setVisibility(View.VISIBLE);
-                    ll_content.setVisibility(View.GONE);
-                } else {
-                    startActivity(new Intent(Menu6Activity.this, Main.class));
-                    finish();
-                }
+              onBackPressed();
             }
         });
 
@@ -64,5 +58,16 @@ public class Menu6Activity extends AppCompatActivity {
         rl_first.setVisibility(View.GONE);
         tv_title.setText(text);
         pdfView.fromAsset(filename).load();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (ll_content.getVisibility() == View.VISIBLE) {
+            rl_first.setVisibility(View.VISIBLE);
+            ll_content.setVisibility(View.GONE);
+        } else {
+            startActivity(new Intent(Menu6Activity.this, Main.class));
+            finish();
+        }
     }
 }

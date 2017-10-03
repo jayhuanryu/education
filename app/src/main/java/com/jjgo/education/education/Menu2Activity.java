@@ -3,10 +3,12 @@ package com.jjgo.education.education;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
@@ -25,6 +27,7 @@ public class Menu2Activity extends AppCompatActivity {
     private Button btnGear;
 
     private PDFView pdfView;
+    private TextView tvPdfTitle;
 
     private ImageView imgBack;
 
@@ -54,6 +57,7 @@ public class Menu2Activity extends AppCompatActivity {
             }
         });
 
+        tvPdfTitle = (TextView)findViewById(R.id.tv_pdf_title);
         //Button Attributes
         btnEducation = (Button) findViewById(R.id.btn_safety_education);
         btnEducation.setOnClickListener(new View.OnClickListener() {
@@ -96,6 +100,14 @@ public class Menu2Activity extends AppCompatActivity {
     }
 
     private void setPDF(String filename) {
+
+        Log.d("Menu2Activity", "filename ; " + filename);
+
+        if (!filename.contains("Gear"))
+            tvPdfTitle.setText("교육매뉴얼");
+        else
+            tvPdfTitle.setText("장비매뉴얼");
+
         pdfView.fromAsset(filename).load();
     }
 }
