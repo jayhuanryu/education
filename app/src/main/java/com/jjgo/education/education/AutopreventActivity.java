@@ -66,7 +66,7 @@ public class AutopreventActivity extends AppCompatActivity {
                     ll_content.setVisibility(View.GONE);
                     ll_start.setVisibility(View.GONE);
                 } else {
-                    startActivity(new Intent(AutopreventActivity.this, ElectricityCenter.class));
+                    startActivity(new Intent(AutopreventActivity.this, Menu11Activity.class));
                 }
             }
         });

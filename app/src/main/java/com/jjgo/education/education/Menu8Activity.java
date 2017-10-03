@@ -12,38 +12,68 @@ import android.widget.TextView;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
-public class RopeCrankingCenter extends AppCompatActivity {
+import static android.view.View.GONE;
+
+public class Menu8Activity extends AppCompatActivity {
 
     private ImageView imgBack;
+    private ImageView img_check;
+    private ImageView imgUp;
+    private ImageView imgDown;
     private Button btnEducation;
     private Button btnGear;
     private TextView tv_title;
 
     private LinearLayout ll_content;
-    private RelativeLayout rl_first;
-
+    private LinearLayout ll_first;
+    private RelativeLayout rl_move_content;
+    private LinearLayout ll_stop;
     private PDFView pdfView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rope_cranking_center);
+        setContentView(R.layout.activity_menu8);
 
         pdfView = (PDFView)findViewById(R.id.crane_pdf);
 
-        rl_first = (RelativeLayout)findViewById(R.id.rl_crane_selection);
+        ll_first = (LinearLayout)findViewById(R.id.rl_crane_selection);
         ll_content = (LinearLayout) findViewById(R.id.ll_crane_content);
+        rl_move_content = (RelativeLayout) findViewById(R.id.ll_moving_content);
+        img_check = (ImageView)findViewById(R.id.img_falls_check);
+        ll_stop = (LinearLayout)findViewById(R.id.ll_stop);
+        imgUp = (ImageView)findViewById(R.id.img_up);
+        imgDown = (ImageView)findViewById(R.id.img_down);
+
+        imgUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        imgDown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
 
         imgBack = (ImageView)findViewById(R.id.img_back);
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ll_content.getVisibility() == View.VISIBLE) {
-                    rl_first.setVisibility(View.VISIBLE);
-                    ll_content.setVisibility(View.GONE);
-                } else {
-                    startActivity(new Intent(RopeCrankingCenter.this, Main.class));
-                }
+               onBackPressed();
+            }
+        });
+
+        img_check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ll_first.setVisibility(GONE);
+                rl_move_content.setVisibility(View.VISIBLE);
+                ll_content.setVisibility(GONE);
             }
         });
 
@@ -70,9 +100,19 @@ public class RopeCrankingCenter extends AppCompatActivity {
 
     private void setPDF(String filename) {
         ll_content.setVisibility(View.VISIBLE);
-        rl_first.setVisibility(View.GONE);
+        ll_first.setVisibility(GONE);
 
         pdfView.fromAsset(filename).load();
 
+    }
+    @Override
+    public void onBackPressed() {
+        if (ll_content.getVisibility() == View.VISIBLE) {
+            ll_first.setVisibility(View.VISIBLE);
+            ll_content.setVisibility(GONE);
+            rl_move_content.setVisibility(GONE);
+        } else {
+            startActivity(new Intent(Menu8Activity.this, Main.class));
+        }
     }
 }

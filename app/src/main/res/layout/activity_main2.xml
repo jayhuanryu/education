@@ -72,7 +72,7 @@
         <TableRow>
 
             <Button
-                android:id="@+id/btn_sealed_center"
+                android:id="@+id/btn_menu1"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/button_background"
@@ -82,7 +82,7 @@
 
 
             <Button
-                android:id="@+id/btn_safety_center"
+                android:id="@+id/btn_menu2"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/button_background"
@@ -95,7 +95,7 @@
         <TableRow android:layout_marginTop="50dp">
 
             <Button
-                android:id="@+id/btn_seatbelt_center"
+                android:id="@+id/btn_menu3"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/button_background"
@@ -104,7 +104,7 @@
                 android:textSize="30sp" />
 
             <Button
-                android:id="@+id/btn_extinguisher_center"
+                android:id="@+id/btn_menu4"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/button_background"
@@ -118,7 +118,7 @@
         <TableRow android:layout_marginTop="50dp">
 
             <Button
-                android:id="@+id/btn_falls_center"
+                android:id="@+id/btn_menu5"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/button_background"
@@ -127,11 +127,11 @@
                 android:textSize="30sp" />
 
             <Button
-                android:id="@+id/btn_4d_center"
+                android:id="@+id/btn_menu6"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/button_background"
-                android:text="@string/button_4d_center"
+                android:text="@string/button_menu6"
                 android:textColor="#000000"
                 android:textSize="30sp" />
 
@@ -141,7 +141,7 @@
         <TableRow android:layout_marginTop="50dp">
 
             <Button
-                android:id="@+id/btn_manage_heavy_center"
+                android:id="@+id/btn_menu7"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/button_background"
@@ -151,7 +151,7 @@
 
 
             <Button
-                android:id="@+id/btn_rope_craking_center"
+                android:id="@+id/btn_menu8"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/button_background"
@@ -166,42 +166,21 @@
         <TableRow android:layout_marginTop="50dp">
 
             <Button
-                android:id="@+id/btn_prevent_falling_center"
+                android:id="@+id/btn_menu9"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/button_background"
-                android:text="@string/button_prevent_falling_center"
+                android:text="@string/button_menu9"
                 android:textColor="#000000"
                 android:textSize="30sp" />
 
 
             <Button
-                android:id="@+id/btn_gas_explode_center"
+                android:id="@+id/btn_menu10"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/button_background"
-                android:text="@string/button_gas_explode_center"
-                android:textColor="#000000"
-                android:textSize="30sp" />
-        </TableRow>
-
-        <TableRow android:layout_marginTop="50dp">
-
-            <Button
-                android:id="@+id/btn_electricity_center"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:background="@drawable/button_background"
-                android:text="@string/button_electricity_center"
-                android:textColor="#000000"
-                android:textSize="30sp" />
-
-            <Button
-                android:id="@+id/btn_CPR_center"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:background="@drawable/button_background"
-                android:text="@string/button_CPR_center"
+                android:text="@string/button_menu10"
                 android:textColor="#000000"
                 android:textSize="30sp" />
         </TableRow>
@@ -209,20 +188,33 @@
         <TableRow android:layout_marginTop="50dp">
 
             <Button
-                android:id="@+id/btn_alco_nico_center"
+                android:id="@+id/btn_menu11"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/button_background"
-                android:text="@string/button_alco_nico_center"
+                android:text="@string/button_menu11"
                 android:textColor="#000000"
                 android:textSize="30sp" />
 
             <Button
-                android:id="@+id/btn_heavy_lifting_center"
+                android:id="@+id/btn_menu12"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:background="@drawable/button_background"
-                android:text="@string/button_heavy_lifting_center"
+                android:text="@string/button_menu12"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="50dp">
+
+
+            <Button
+                android:id="@+id/btn_menu13"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/button_background"
+                android:text="@string/button_menu13"
                 android:textColor="#000000"
                 android:textSize="30sp" />
         </TableRow>

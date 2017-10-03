@@ -58,7 +58,7 @@ public class PreventGasActivity extends AppCompatActivity {
                     ll_first.setVisibility(View.VISIBLE);
                     ll_content.setVisibility(View.GONE);
                 } else {
-                    startActivity(new Intent(PreventGasActivity.this, GasExplodeCenter.class));
+                    startActivity(new Intent(PreventGasActivity.this, Menu10Activity.class));
                     finish();
                 }
             }

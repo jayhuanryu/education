@@ -66,7 +66,7 @@ public class ElectricShockActivity extends AppCompatActivity {
                     ll_content.setVisibility(View.GONE);
                     ll_start.setVisibility(View.GONE);
                 } else {
-                    startActivity(new Intent(ElectricShockActivity.this, ElectricityCenter.class));
+                    startActivity(new Intent(ElectricShockActivity.this, Menu11Activity.class));
                 }
             }
         });

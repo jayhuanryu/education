@@ -133,8 +133,14 @@ public class MainActivity extends AppCompatActivity {
                             et_pw3.setText("");
                             et_pw4.setText("");
                             et_pw1.requestFocus();
+
+                            password = "";
+                            for (int i = 0 ; i < passwordarray.length; i++) {
+                                passwordarray[i] = "0";
+                            }
                         }
                     });
+                    builder.create().show();
                 }
             }
         });

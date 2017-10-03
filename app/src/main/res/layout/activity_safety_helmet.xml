@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/blue_background"
     android:orientation="vertical"
-    tools:context="com.jjgo.education.education.SafetyHelmetActivity">
+    tools:context="com.jjgo.education.education.Menu2_2Activity">
 
     <!--  상단 -->
 

@@ -1,7 +1,6 @@
 package com.jjgo.education.education;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-public class SafetyHelmetActivity extends AppCompatActivity {
+public class Menu2_2Activity extends AppCompatActivity {
 
     private RelativeLayout rl_ready;
     private RelativeLayout rl_start;
@@ -37,7 +36,7 @@ public class SafetyHelmetActivity extends AppCompatActivity {
                     rl_start.setVisibility(View.GONE);
                     rl_ready.setVisibility(View.VISIBLE);
                 } else {
-                    startActivity(new Intent(SafetyHelmetActivity.this, SafetyCenter.class));
+                    startActivity(new Intent(Menu2_2Activity.this, Menu2Activity.class));
                     finish();
                 }
             }
@@ -46,7 +45,7 @@ public class SafetyHelmetActivity extends AppCompatActivity {
         ll_stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(SafetyHelmetActivity.this, "stop clicked ", Toast.LENGTH_LONG).show();
+                Toast.makeText(Menu2_2Activity.this, "stop clicked ", Toast.LENGTH_LONG).show();
             }
         });
 

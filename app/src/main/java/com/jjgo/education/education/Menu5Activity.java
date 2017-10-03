@@ -32,7 +32,7 @@ public class Menu5Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_falls_center);
+        setContentView(R.layout.activity_menu5);
 
         ll_first = (LinearLayout) findViewById(R.id.ll_falls_first);
         ll_start = (LinearLayout) findViewById(R.id.ll_falls_start);
@@ -88,7 +88,7 @@ public class Menu5Activity extends AppCompatActivity {
         btnEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setPDF("fallsEducation.pdf");
+                setPDF("menu5Education.pdf");
             }
         });
 
@@ -96,7 +96,7 @@ public class Menu5Activity extends AppCompatActivity {
         btnGear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setPDF("fallsGear.pdf");
+                setPDF("menu5Gear.pdf");
             }
         });
 

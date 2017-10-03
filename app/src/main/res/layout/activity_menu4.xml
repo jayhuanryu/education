@@ -3,10 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/blue_background"
-    tools:context="com.jjgo.education.education.Menu2_1Activity">
+    android:layout_height="match_parent"
+    tools:context="com.jjgo.education.education.Menu4Activity">
+
+    <!--  상단 -->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -53,27 +55,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="안전화 체험장"
+        android:text="@string/button_menu4"
         android:textSize="60sp"
         android:textColor="@color/textColor_black"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"/>
 
-
     <LinearLayout
-        android:id="@+id/ll_shoes_start"
+        android:id="@+id/ll_extinguisher_first"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:weightSum="10">
 
         <RelativeLayout
-            android:id="@+id/rl_shoes_ready"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="8">
 
             <ImageView
-                android:id="@+id/img_shoes_ready"
+                android:id="@+id/img_extinguisher_check"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:src="@drawable/img_check"
@@ -83,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/img_shoes_ready"
+                android:layout_below="@+id/img_extinguisher_check"
                 android:layout_centerHorizontal="true"
                 android:text="준비"
                 android:textSize="30sp"
@@ -91,60 +93,81 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/rl_shoes_awl"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="8"
-            android:visibility="gone">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="2">
 
-            <ImageView
-                android:id="@+id/img_shoes_awl"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:src="@drawable/img_hammer_fall"
-                android:layout_centerInParent="true"/>
-
-            <TextView
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btn_extinguisher_education"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_below="@+id/img_shoes_awl"
-                android:layout_centerHorizontal="true"
-                android:text="송곳돌출"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/button_background"
+                android:layout_weight="1"
+                android:text="교육매뉴얼"
                 android:textSize="30sp"
-                android:textColor="@color/textColor_black"/>
+                android:textColor="@color/textColor_black"
+                android:textStyle="bold"/>
 
-        </RelativeLayout>
+            <Button
+                android:id="@+id/btn_extinguisher_gear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/button_background"
+                android:layout_weight="1"
+                android:text="장비매뉴얼"
+                android:textSize="30sp"
+                android:textColor="@color/textColor_black"
+                android:textStyle="bold"/>
 
-        <RelativeLayout
-            android:id="@+id/rl_shoes_hammer"
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="8"
-            android:visibility="gone">
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_extinguisher_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8">
 
             <ImageView
-                android:id="@+id/img_shoes_hammer"
+                android:id="@+id/img_extinguisher_start"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/imge_fall"
+                android:src="@drawable/img_proceed"
                 android:layout_centerInParent="true"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/img_shoes_hammer"
+                android:layout_below="@+id/img_extinguisher_start"
                 android:layout_centerHorizontal="true"
-                android:text="해머낙하"
+                android:text="화염장치작동"
                 android:textSize="30sp"
                 android:textColor="@color/textColor_black"/>
 
         </RelativeLayout>
 
         <LinearLayout
-            android:id="@+id/ll_shoes_stop"
+            android:id="@+id/ll_extinguisher_stop"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
@@ -193,4 +216,14 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/ll_extinguisher__content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/extinguisher_pdf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
 </LinearLayout>

@@ -57,7 +57,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:gravity="center_horizontal"
-        android:text="@string/button_seatbelt_center"
+        android:text="@string/button_menu3"
         android:textColor="@color/textColor_black"
         android:textSize="60sp" />
 
@@ -84,7 +84,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/img_check"
+                android:layout_below="@+id/img_seatbelt_check"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:text="준비"
@@ -151,63 +151,80 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:layout_centerHorizontal="true"
                 android:weightSum="2">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center_horizontal">
+                    android:gravity="end">
 
                     <ImageView
                         android:id="@+id/img_seatbelt_up"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
+                        android:layout_marginTop="100dp"
                         android:layout_gravity="center_horizontal"
                         android:gravity="center_horizontal"
                         android:src="@drawable/img_up" />
 
                     <TextView
+                        android:id="@+id/tv_ascend"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:layout_gravity="center_horizontal"
-                        android:gravity="center_horizontal"
+                        android:layout_below="@+id/img_seatbelt_up"
+                        android:gravity="end"
                         android:text="상승"
                         android:textColor="@color/textColor_black"
                         android:textSize="30sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center_horizontal">
 
                     <ImageView
                         android:id="@+id/img_seatbelt_down"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:src="@drawable/img_down"
+                        android:layout_below="@id/tv_ascend"
                         android:layout_gravity="center_horizontal"
                         android:gravity="center_horizontal"/>
 
                     <TextView
+                        android:id="@+id/tv_descend"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:gravity="center_horizontal"
+                        android:layout_below="@id/img_seatbelt_down"
                         android:layout_marginTop="20dp"
                         android:text="하강"
                         android:textColor="@color/textColor_black"
                         android:textSize="30sp" />
-                </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_drop"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/img_drop"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_drop"
+                        android:layout_centerHorizontal="true"
+                        android:text="추락"
+                        android:textColor="@color/textColor_black"
+                        android:textSize="30sp"/>
+                </RelativeLayout>
 
             </LinearLayout>
 

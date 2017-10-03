@@ -32,7 +32,7 @@ public class Menu4Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_extinguisher_center);
+        setContentView(R.layout.activity_menu4);
 
         ll_first = (LinearLayout) findViewById(R.id.ll_extinguisher_first);
         ll_start = (LinearLayout) findViewById(R.id.ll_extinguisher_start);
@@ -88,7 +88,7 @@ public class Menu4Activity extends AppCompatActivity {
         btnEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setPDF("extinguisherEducation.pdf");
+                setPDF("menu4Education.pdf");
             }
         });
 
@@ -96,7 +96,7 @@ public class Menu4Activity extends AppCompatActivity {
         btnGear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setPDF("extinguisherGear.pdf");
+                setPDF("menu4Gear.pdf");
             }
         });
 

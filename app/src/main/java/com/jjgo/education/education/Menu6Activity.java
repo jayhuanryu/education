@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
-public class PreventFallCenter extends AppCompatActivity {
+public class Menu6Activity extends AppCompatActivity {
 
     private ImageView imgBack;
     private Button btnCulgol;
@@ -26,7 +26,7 @@ public class PreventFallCenter extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prevent_fall_center);
+        setContentView(R.layout.activity_menu6);
 
         rl_first = (RelativeLayout) findViewById(R.id.rl_prevent_selection);
         ll_content = (LinearLayout)findViewById(R.id.ll_prevent_content);
@@ -41,25 +41,18 @@ public class PreventFallCenter extends AppCompatActivity {
                     rl_first.setVisibility(View.VISIBLE);
                     ll_content.setVisibility(View.GONE);
                 } else {
-                    startActivity(new Intent(PreventFallCenter.this, Main.class));
+                    startActivity(new Intent(Menu6Activity.this, Main.class));
                     finish();
                 }
             }
         });
 
-        btnCulgol = (Button) findViewById(R.id.btn_prevent_chulgol);
         btnGoso = (Button) findViewById(R.id.btn_prevent_goso);
 
-        btnCulgol.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setPDF("chulgolEducation.pdf", "고소작업 교육 매뉴얼");
-            }
-        });
         btnGoso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setPDF("gosoEducation.pdf", "철골상부이동 교육 매뉴얼");
+                setPDF("menu6Education.pdf", getResources().getString(R.string.CPR_education));
             }
         });
 

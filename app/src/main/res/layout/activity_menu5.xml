@@ -56,7 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/button_falls_center"
+        android:text="@string/button_menu5"
         android:textSize="60sp"
         android:textColor="@color/textColor_black"
         android:layout_gravity="center_horizontal"

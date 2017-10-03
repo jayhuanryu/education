@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/blue_background"
-    tools:context="com.jjgo.education.education.ManageHeavyCenter">
+    tools:context="com.jjgo.education.education.Menu7Activity">
 
     <!--  상단 -->
 
@@ -55,7 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/button_manage_heavy_center"
+        android:text="@string/button_menu7"
         android:textSize="60sp"
         android:textColor="@color/textColor_black"
         android:layout_gravity="center_horizontal"
@@ -151,7 +151,7 @@
                 android:id="@+id/img_equipment_start"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/img_proceed"
+                android:src="@drawable/img_crane"
                 android:layout_centerInParent="true"/>
 
             <TextView

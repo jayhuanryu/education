@@ -4,88 +4,98 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
+
+import com.github.barteksc.pdfviewer.PDFView;
+
+import static android.view.View.GONE;
 
 public class Menu2Activity extends AppCompatActivity {
 
-    private RelativeLayout rl_start;
-    private RelativeLayout rl_awl;
-    private RelativeLayout rl_hammer;
+    //Layout Attributes..
+    private LinearLayout ll_content;
+    private LinearLayout ll_first;
 
-    private LinearLayout ll_stop;
+    //Button Attributes
+    private Button btnShoes;
+    private Button btnHelmet;
+    private Button btnEducation;
+    private Button btnGear;
+
+    private PDFView pdfView;
 
     private ImageView imgBack;
-    private ImageView imgReady;
-    private ImageView imgawl;
-    private ImageView imgHammer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_safety_shoe);
+        setContentView(R.layout.activity_menu2);
 
-        ll_stop = (LinearLayout) findViewById(R.id.ll_shoes_stop);
-        ll_stop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(Menu2Activity.this, "stop clicked", Toast.LENGTH_SHORT).show();
-            }
-        });
+        //Layout Attributes
+        ll_first = (LinearLayout) findViewById(R.id.ll_safety_first);
+        ll_content = (LinearLayout) findViewById(R.id.ll_safety_content);
 
-        rl_start = (RelativeLayout)findViewById(R.id.rl_shoes_ready);
-        rl_awl = (RelativeLayout) findViewById(R.id.rl_shoes_awl);
-        rl_hammer = (RelativeLayout)findViewById(R.id.rl_shoes_hammer);
+        //pdf viewer
+        pdfView = (PDFView)findViewById(R.id.pdf_safety);
 
         imgBack = (ImageView) findViewById(R.id.img_back);
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (rl_hammer.getVisibility() == View.VISIBLE) {
-                    rl_awl.setVisibility(View.VISIBLE);
-                    rl_start.setVisibility(View.GONE);
-                    rl_hammer.setVisibility(View.GONE);
-                } else if (rl_awl.getVisibility() == View.VISIBLE) {
-                    rl_awl.setVisibility(View.GONE);
-                    rl_hammer.setVisibility(View.GONE);
-                    rl_start.setVisibility(View.VISIBLE);
+                if (ll_content.getVisibility() == View.VISIBLE) {
+                    ll_first.setVisibility(View.VISIBLE);
+                    ll_content.setVisibility(GONE);
                 } else {
-                    startActivity(new Intent(Menu2Activity.this, SafetyCenter.class));
+                    startActivity(new Intent(Menu2Activity.this, Main.class));
                     finish();
                 }
             }
         });
 
-        imgReady = (ImageView) findViewById(R.id.img_shoes_ready);
-        imgReady.setOnClickListener(new View.OnClickListener() {
+        //Button Attributes
+        btnEducation = (Button) findViewById(R.id.btn_safety_education);
+        btnEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                rl_awl.setVisibility(View.VISIBLE);
-                rl_start.setVisibility(View.GONE);
-                rl_hammer.setVisibility(View.GONE);
+                ll_first.setVisibility(GONE);
+                ll_content.setVisibility(View.VISIBLE);
+                setPDF("menu2Education.pdf");
             }
         });
 
-        imgawl = (ImageView) findViewById(R.id.img_shoes_awl);
-        imgawl.setOnClickListener(new View.OnClickListener() {
+        btnGear = (Button) findViewById(R.id.btn_safety_gear);
+        btnGear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                rl_awl.setVisibility(View.GONE);
-                rl_hammer.setVisibility(View.VISIBLE);
-                rl_start.setVisibility(View.GONE);
+                ll_first.setVisibility(GONE);
+                ll_content.setVisibility(View.VISIBLE);
+                setPDF("menu2Gear.pdf");
             }
         });
 
-        imgHammer = (ImageView)findViewById(R.id.img_shoes_hammer);
-        imgHammer.setOnClickListener(new View.OnClickListener() {
+        btnShoes = (Button)findViewById(R.id.btn_shoes);
+        btnShoes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Menu2Activity.this, "click", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Menu2Activity.this, Menu2_1Activity.class));
+                finish();
             }
         });
+
+        btnHelmet = (Button) findViewById(R.id.btn_helmet);
+        btnHelmet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Menu2Activity.this, Menu2_2Activity.class));
+                finish();
+            }
+        });
+
     }
 
-
+    private void setPDF(String filename) {
+        pdfView.fromAsset(filename).load();
+    }
 }

@@ -31,7 +31,7 @@ public class Menu3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seatbelt_center);
+        setContentView(R.layout.activity_menu3);
 
         pdfView = (PDFView)findViewById(R.id.pdf_seatbelt);
 
@@ -51,18 +51,7 @@ public class Menu3Activity extends AppCompatActivity {
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ll_content.getVisibility() == View.VISIBLE) {
-                    ll_ready.setVisibility(View.VISIBLE);
-                    ll_start.setVisibility(View.GONE);
-                    ll_content.setVisibility(View.GONE);
-                } else if (ll_start.getVisibility() == View.VISIBLE) {
-                    ll_ready.setVisibility(View.VISIBLE);
-                    ll_start.setVisibility(View.GONE);
-                    ll_content.setVisibility(View.GONE);
-                } else {
-                    startActivity(new Intent(Menu3Activity.this, Main.class));
-                    finish();
-                }
+
             }
         });
 
@@ -125,5 +114,21 @@ public class Menu3Activity extends AppCompatActivity {
         ll_ready.setVisibility(View.GONE);
 
         pdfView.fromAsset(filename).load();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (ll_content.getVisibility() == View.VISIBLE) {
+            ll_ready.setVisibility(View.VISIBLE);
+            ll_start.setVisibility(View.GONE);
+            ll_content.setVisibility(View.GONE);
+        } else if (ll_start.getVisibility() == View.VISIBLE) {
+            ll_ready.setVisibility(View.VISIBLE);
+            ll_start.setVisibility(View.GONE);
+            ll_content.setVisibility(View.GONE);
+        } else {
+            startActivity(new Intent(Menu3Activity.this, Main.class));
+            finish();
+        }
     }
 }

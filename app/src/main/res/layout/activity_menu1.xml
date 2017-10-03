@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/blue_background"
     android:layout_height="match_parent"
-    tools:context="com.jjgo.education.education.Menu4Activity">
+    android:background="@drawable/blue_background"
+    android:orientation="vertical"
+    tools:context="com.jjgo.education.education.Menu1Activity">
 
     <!--  상단 -->
 
@@ -55,14 +55,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/button_extinguisher_center"
+        android:text="@string/button_menu1"
         android:textSize="60sp"
         android:textColor="@color/textColor_black"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"/>
 
     <LinearLayout
-        android:id="@+id/ll_extinguisher_first"
+        android:id="@+id/ll_sealed_first"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="30dp"
@@ -75,7 +75,7 @@
             android:layout_weight="8">
 
             <ImageView
-                android:id="@+id/img_extinguisher_check"
+                android:id="@+id/img_check"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:src="@drawable/img_check"
@@ -101,7 +101,7 @@
             android:weightSum="2">
 
             <Button
-                android:id="@+id/btn_extinguisher_education"
+                android:id="@+id/btn_education"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
@@ -114,7 +114,7 @@
                 android:textStyle="bold"/>
 
             <Button
-                android:id="@+id/btn_extinguisher_gear"
+                android:id="@+id/btn_gear"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
@@ -136,7 +136,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/ll_extinguisher_start"
+        android:id="@+id/ll_sealed_start"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -148,7 +148,7 @@
             android:layout_weight="8">
 
             <ImageView
-                android:id="@+id/img_extinguisher_start"
+                android:id="@+id/img_start"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:src="@drawable/img_proceed"
@@ -158,16 +158,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/img_extinguisher_start"
+                android:layout_below="@+id/img_start"
                 android:layout_centerHorizontal="true"
-                android:text="화염장치작동"
+                android:text="시작"
                 android:textSize="30sp"
                 android:textColor="@color/textColor_black"/>
 
         </RelativeLayout>
 
         <LinearLayout
-            android:id="@+id/ll_extinguisher_stop"
+            android:id="@+id/ll_sealed_stop"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
@@ -217,13 +217,20 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/ll_extinguisher__content"
+        android:id="@+id/ll_sealed_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <com.github.barteksc.pdfviewer.PDFView
-            android:id="@+id/extinguisher_pdf"
+            android:id="@+id/pdf_sealed"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent">
+
+        </com.github.barteksc.pdfviewer.PDFView>
+
     </LinearLayout>
+
+
+
 </LinearLayout>

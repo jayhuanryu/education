@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/blue_background"
     android:orientation="vertical"
-    tools:context="com.jjgo.education.education.SafetyCenter">
+    tools:context="com.jjgo.education.education.Menu12Activity">
 
     <!--  상단 -->
 
@@ -57,12 +57,12 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:gravity="center_horizontal"
-        android:text="@string/button_safety_center"
+        android:text="@string/button_menu12"
         android:textColor="@color/textColor_black"
         android:textSize="60sp" />
 
     <LinearLayout
-        android:id="@+id/ll_safety_first"
+        android:id="@+id/ll_cpr_first"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="30dp"
@@ -74,82 +74,72 @@
             android:layout_height="0dp"
             android:layout_weight="8">
 
-            <Button
-                android:id="@+id/btn_shoes"
-                android:layout_width="300dp"
-                android:layout_height="100dp"
-                android:text="안전화 체험장"
-                android:textSize="40sp"
-                android:textColor="@color/textColor_black"
-                android:textStyle="bold"
-                android:background="@drawable/button_background"
-                android:layout_alignParentBottom="true"
-                android:layout_alignLeft="@+id/btn_helmet"
-                android:layout_alignStart="@+id/btn_helmet"
-                android:layout_marginBottom="231dp" />
+            <ImageView
+                android:id="@+id/img_cpr"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/img_cpr" />
 
-           <Button
-               android:id="@+id/btn_helmet"
-               android:layout_width="300dp"
-               android:layout_height="100dp"
-               android:text="안전모 체험장"
-               android:textSize="40sp"
-               android:textColor="@color/textColor_black"
-               android:textStyle="bold"
-               android:background="@drawable/button_background"
-               android:layout_above="@+id/btn_shoes"
-               android:layout_centerHorizontal="true"
-               android:layout_marginBottom="84dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_firstaid_selection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_firstaid_education"
+                android:layout_width="400dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="208dp"
+                android:background="@drawable/button_background"
+                android:text="교육 매뉴얼"
+                android:textColor="@color/textColor_black"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_firstaid_gear"
+                android:layout_width="400dp"
+                android:layout_height="100dp"
+                android:layout_alignLeft="@+id/btn_firstaid_education"
+                android:layout_alignStart="@+id/btn_firstaid_education"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_background"
+                android:text="장비 매뉴얼"
+                android:textColor="@color/textColor_black"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
 
         </RelativeLayout>
 
         <LinearLayout
+            android:id="@+id/ll_firstaid_content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="2">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btn_safety_education"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/tv_firstaid_title"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_background"
-                android:text="교육매뉴얼"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
                 android:textColor="@color/textColor_black"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/btn_safety_gear"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_background"
-                android:text="장비매뉴얼"
-                android:textColor="@color/textColor_black"
-                android:textSize="30sp"
-                android:textStyle="bold" />
-
+            <com.github.barteksc.pdfviewer.PDFView
+                android:id="@+id/firstaid_pdf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
         </LinearLayout>
+
+
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_safety_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone">
-
-        <com.github.barteksc.pdfviewer.PDFView
-            android:id="@+id/pdf_safety"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </LinearLayout>
-
-
 </LinearLayout>

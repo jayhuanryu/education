@@ -34,7 +34,7 @@ public class Menu1Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sealed_center);
+        setContentView(R.layout.activity_menu1);
 
         //Setting Layouts
         ll_first = (LinearLayout) findViewById(R.id.ll_sealed_first);
@@ -53,18 +53,7 @@ public class Menu1Activity extends AppCompatActivity {
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ll_content.getVisibility() == View.VISIBLE) {
-                    ll_first.setVisibility(View.VISIBLE);
-                    ll_content.setVisibility(View.GONE);
-                    ll_start.setVisibility(View.GONE);
-                } else if (ll_start.getVisibility() == View.VISIBLE) {
-                    ll_first.setVisibility(View.VISIBLE);
-                    ll_content.setVisibility(View.GONE);
-                    ll_start.setVisibility(View.GONE);
-                } else {
-                    startActivity(new Intent(Menu1Activity.this, Main.class));
-                    finish();
-                }
+           onBackPressed();
             }
         });
 
@@ -78,7 +67,7 @@ public class Menu1Activity extends AppCompatActivity {
                 ll_start.setVisibility(View.GONE);
                 ll_content.setVisibility(View.VISIBLE);
 
-                setPDF("sealedEducation.pdf");
+                setPDF("menu1Education.pdf");
             }
         });
 
@@ -91,7 +80,7 @@ public class Menu1Activity extends AppCompatActivity {
                 ll_start.setVisibility(View.GONE);
                 ll_content.setVisibility(View.VISIBLE);
 
-                setPDF("sealedGear.pdf");
+                setPDF("menu1Gear.pdf");
             }
         });
 
@@ -127,5 +116,21 @@ public class Menu1Activity extends AppCompatActivity {
     }
     private void setPDF(String filename){
         pdfView.fromAsset(filename).load();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(ll_content.getVisibility() == View.VISIBLE) {
+            ll_first.setVisibility(View.VISIBLE);
+            ll_content.setVisibility(View.GONE);
+            ll_start.setVisibility(View.GONE);
+        } else if (ll_start.getVisibility() == View.VISIBLE) {
+            ll_first.setVisibility(View.VISIBLE);
+            ll_content.setVisibility(View.GONE);
+            ll_start.setVisibility(View.GONE);
+        } else {
+            startActivity(new Intent(Menu1Activity.this, Main.class));
+            finish();
+        }
     }
 }

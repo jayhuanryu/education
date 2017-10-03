@@ -11,7 +11,9 @@ import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
-public class ManageHeavyCenter extends AppCompatActivity {
+import static android.view.View.GONE;
+
+public class Menu7Activity extends AppCompatActivity {
 
     private LinearLayout ll_first;
     private LinearLayout ll_start;
@@ -29,7 +31,7 @@ public class ManageHeavyCenter extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_manage_heavy_center);
+        setContentView(R.layout.activity_menu7);
 
         pdfView = (PDFView) findViewById(R.id.equipment_pdf);
 
@@ -45,16 +47,31 @@ public class ManageHeavyCenter extends AppCompatActivity {
             public void onClick(View v) {
                 if (ll_content.getVisibility() == View.VISIBLE) {
                     ll_first.setVisibility(View.VISIBLE);
-                    ll_content.setVisibility(View.GONE);
-                    ll_start.setVisibility(View.GONE);
+                    ll_content.setVisibility(GONE);
+                    ll_start.setVisibility(GONE);
                 } else if (ll_start.getVisibility() == View.VISIBLE) {
                     ll_first.setVisibility(View.VISIBLE);
-                    ll_content.setVisibility(View.GONE);
-                    ll_start.setVisibility(View.GONE);
+                    ll_content.setVisibility(GONE);
+                    ll_start.setVisibility(GONE);
                 } else {
-                    startActivity(new Intent(ManageHeavyCenter.this, Main.class));
+                    startActivity(new Intent(Menu7Activity.this, Main.class));
                     finish();
                 }
+            }
+        });
+
+        ll_first.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ll_first.setVisibility(GONE);
+                ll_start.setVisibility(View.VISIBLE);
+            }
+        });
+
+        ll_start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //협착시작
             }
         });
 
@@ -62,10 +79,10 @@ public class ManageHeavyCenter extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ll_first.setVisibility(View.VISIBLE);
-                ll_content.setVisibility(View.GONE);
-                ll_start.setVisibility(View.GONE);
+                ll_content.setVisibility(GONE);
+                ll_start.setVisibility(GONE);
 
-                Toast.makeText(ManageHeavyCenter.this, "Stop Clicked", Toast.LENGTH_SHORT);
+                Toast.makeText(Menu7Activity.this, "Stop Clicked", Toast.LENGTH_SHORT);
             }
         });
 
@@ -73,22 +90,22 @@ public class ManageHeavyCenter extends AppCompatActivity {
         btnEquipmentEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setPDF("heaequipmentEducation.pdf");
+                setPDF("menu7Education.pdf");
             }
         });
         btnEquipmentGear = (Button)findViewById(R.id.btn_equipment_gear);
         btnEquipmentGear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setPDF("heavyequipmentGear.pdf");
+                setPDF("menu7Gear.pdf");
             }
         });
     }
 
     private void setPDF(String filelname) {
-        ll_first.setVisibility(View.GONE);
+        ll_first.setVisibility(GONE);
         ll_content.setVisibility(View.VISIBLE);
-        ll_start.setVisibility(View.GONE);
+        ll_start.setVisibility(GONE);
 
         pdfView.fromAsset(filelname).load();
 

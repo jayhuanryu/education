@@ -1,6 +1,8 @@
 package com.jjgo.education.education;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,21 +17,21 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
 
 
         /** Setting Button Attributes.. **/
+        findViewById(R.id.btn_menu1).setOnClickListener(this);
+        findViewById(R.id.btn_menu2).setOnClickListener(this);
+        findViewById(R.id.btn_menu3).setOnClickListener(this);
+        findViewById(R.id.btn_menu4).setOnClickListener(this);
+        findViewById(R.id.btn_menu5).setOnClickListener(this);
+        findViewById(R.id.btn_menu6).setOnClickListener(this);
+        findViewById(R.id.btn_menu7).setOnClickListener(this);
+        findViewById(R.id.btn_menu8).setOnClickListener(this);
+        findViewById(R.id.btn_menu9).setOnClickListener(this);
+        findViewById(R.id.btn_menu10).setOnClickListener(this);
+        findViewById(R.id.btn_menu11).setOnClickListener(this);
+        findViewById(R.id.btn_menu12).setOnClickListener(this);
+        findViewById(R.id.btn_menu13).setOnClickListener(this);
         findViewById(R.id.btn_back).setOnClickListener(this);
-        findViewById(R.id.btn_4d_center).setOnClickListener(this);
-        findViewById(R.id.btn_sealed_center).setOnClickListener(this);
-        findViewById(R.id.btn_safety_center).setOnClickListener(this);
-        findViewById(R.id.btn_seatbelt_center).setOnClickListener(this);
-        findViewById(R.id.btn_extinguisher_center).setOnClickListener(this);
-        findViewById(R.id.btn_falls_center).setOnClickListener(this);
-        findViewById(R.id.btn_prevent_falling_center).setOnClickListener(this);
-        findViewById(R.id.btn_manage_heavy_center).setOnClickListener(this);
-        findViewById(R.id.btn_rope_craking_center).setOnClickListener(this);
-        findViewById(R.id.btn_gas_explode_center).setOnClickListener(this);
-        findViewById(R.id.btn_electricity_center).setOnClickListener(this);
-        findViewById(R.id.btn_CPR_center).setOnClickListener(this);
-        findViewById(R.id.btn_alco_nico_center).setOnClickListener(this);
-        findViewById(R.id.btn_heavy_lifting_center).setOnClickListener(this);
+
 
     }
 
@@ -39,63 +41,73 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
             case R.id.btn_back:
                 startActivity(new Intent(this, UserSettingActivity.class));
                 break;
-            case R.id.btn_4d_center:
-                startActivity(new Intent(this, FourDCenter.class));
-                finish();
-                break;
-            case R.id.btn_sealed_center:
+            case R.id.btn_menu1:
                 startActivity(new Intent(this, Menu1Activity.class));
                 finish();
                 break;
-            case R.id.btn_safety_center:
-                startActivity(new Intent(this, SafetyCenter.class));
+            case R.id.btn_menu2:
+                startActivity(new Intent(this, Menu2Activity.class));
                 finish();
                 break;
-            case R.id.btn_seatbelt_center:
+            case R.id.btn_menu3:
                 startActivity(new Intent(this, Menu3Activity.class));
                 finish();
                 break;
-            case R.id.btn_extinguisher_center:
+            case R.id.btn_menu4:
                 startActivity(new Intent(this, Menu4Activity.class));
                 finish();
                 break;
-            case R.id.btn_falls_center:
+            case R.id.btn_menu5:
                 startActivity(new Intent(this, Menu5Activity.class));
                 finish();
                 break;
-            case R.id.btn_prevent_falling_center:
-                startActivity(new Intent(this, PreventFallCenter.class));
+            case R.id.btn_menu6:
+                startActivity(new Intent(this, Menu6Activity.class));
                 finish();
                 break;
-            case R.id.btn_manage_heavy_center:
-                startActivity(new Intent(this, ManageHeavyCenter.class));
+            case R.id.btn_menu7:
+                startActivity(new Intent(this, Menu7Activity.class));
                 finish();
                 break;
-            case R.id.btn_rope_craking_center:
-                startActivity(new Intent(this, RopeCrankingCenter.class));
+            case R.id.btn_menu8:
+                startActivity(new Intent(this, Menu8Activity.class));
                 finish();
                 break;
-            case R.id.btn_gas_explode_center:
-                startActivity(new Intent(this, GasExplodeCenter.class));
+            case R.id.btn_menu9:
+                startActivity(new Intent(this, Menu9Activity.class));
                 finish();
                 break;
-            case R.id.btn_electricity_center:
-                startActivity(new Intent(this, ElectricityCenter.class));
+            case R.id.btn_menu10:
+                startActivity(new Intent(this, Menu10Activity.class));
                 finish();
                 break;
-            case R.id.btn_CPR_center:
-                startActivity(new Intent(this, CPRCenter.class));
+            case R.id.btn_menu11:
+                startActivity(new Intent(this, Menu11Activity.class));
                 finish();
                 break;
-            case R.id.btn_alco_nico_center:
-                startActivity(new Intent(this, AlcoNicoCenter.class));
+            case R.id.btn_menu12:
+                startActivity(new Intent(this, Menu12Activity.class));
                 finish();
                 break;
-            case R.id.btn_heavy_lifting_center:
-                startActivity(new Intent(this, HeavyLiftingCenter.class));
+            case R.id.btn_menu13:
+                startActivity(new Intent(this, Menu13Activity.class));
                 finish();
                 break;
 
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("알림");
+        builder.setMessage("앱을 종료하시겠습니까?");
+        builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+        builder.create().show();
     }
 }

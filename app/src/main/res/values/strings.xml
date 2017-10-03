@@ -3,7 +3,7 @@
 
     <string name="app_name">Education</string>
     <string name="p001_title">안전체험교육장</string>
-    <string name="p001_subtitle">고성 그린파워현장</string> <!-- 현장명 -->
+    <string name="p001_subtitle">안전체험교육장</string> <!-- 현장명 -->
     <string name="p001_pw">1234</string>
 
 
@@ -14,16 +14,20 @@
     <string name="button_menu4">화재사고 예방 체험</string>
     <string name="button_menu5">낙하물사고 예방 체험</string>
     <string name="button_menu6">종합가설 안전 체험</string>
+    <string name="menu6btn1">종합가설 안전 매뉴얼</string>
     <string name="button_menu7">중장비 관리 체험장</string>
-    <string name="button_menu8">줄걸이 체험장</string>
+    <string name="button_menu8">줄걸이 안전 체험장</string>
     <string name="button_menu9">화학물질/폭발사고 예방체험</string>
+    <string name="button_menu10">가스누출사고 예방 체험</string>
+    <string name="button_menu11">전기사고 예방 체험</string>
+    <string name="button_menu12">응급처치 실습</string>
+    <string name="button_menu13">근골격계 예방 체험</string>
+
+
+    <!-- not using anymore -->
     <string name="button_4d_center">4D 체험장</string>
-
     <string name="button_prevent_falling_center">추락사고 예방 체험장</string>
-
-
     <string name="button_gas_explode_center">가스/폭발사고 예방</string>
-    <string name="button_menu11">전기사고 예방</string>
     <string name="button_CPR_center">심폐소생술 체험장</string>
     <string name="button_alco_nico_center">음주/흡연 체험장</string>
     <string name="button_heavy_lifting_center">중량물 들기 체험장</string>
