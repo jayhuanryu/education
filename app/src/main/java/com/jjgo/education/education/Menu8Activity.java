@@ -85,19 +85,19 @@ public class Menu8Activity extends AppCompatActivity {
         btnEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv_title.setText("교육메뉴얼");
+                tv_title.setText(getResources().getString(R.string.CPR_education));
                 setPDF("menu8Education.pdf");
             }
         });
 
-        btnGear = (Button) findViewById(R.id.btn_crane_gear);
-        btnGear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tv_title.setText("장비메뉴얼");
-                setPDF("menu8Gear.pdf");
-            }
-        });
+//        btnGear = (Button) findViewById(R.id.btn_crane_gear);
+//        btnGear.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                tv_title.setText("장비메뉴얼");
+//                setPDF("menu8Gear.pdf");
+//            }
+//        });
     }
 
     private void setPDF(String filename) {

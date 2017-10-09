@@ -48,12 +48,12 @@ public class Menu13Activity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.btn_bone_gear).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setPDF("menu13EGear.pdf");
-            }
-        });
+//        findViewById(R.id.btn_bone_gear).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                setPDF("menu13EGear.pdf");
+//            }
+//        });
 
 
     }
@@ -65,7 +65,7 @@ public class Menu13Activity extends AppCompatActivity {
         if (filelname.contains("Gear"))
             pdfTitle.setText("장비메뉴얼");
         else
-            pdfTitle.setText("교육메뉴얼");
+            pdfTitle.setText(getResources().getString(R.string.CPR_education));
 
         pdfView.fromAsset(filelname).load();
 

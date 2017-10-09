@@ -61,14 +61,15 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="@string/button_menu10"
-        android:textSize="60sp"
-        android:textColor="@color/textColor_black"
         android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"/>
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="@string/button_menu10"
+        android:textColor="@color/textColor_black"
+        android:textSize="60sp" />
 
     <LinearLayout
         android:id="@+id/ll_gas_first"
@@ -87,60 +88,61 @@
                 android:id="@+id/img_gas_check"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/img_check"
-                android:layout_centerInParent="true"/>
+                android:layout_centerInParent="true"
+                android:src="@drawable/img_check" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_below="@+id/img_gas_check"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
                 android:text="준비"
-                android:textSize="30sp"
-                android:textColor="@color/textColor_black"/>
+                android:textColor="@color/textColor_black"
+                android:textSize="30sp" />
 
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_weight="1"
+            android:orientation="horizontal"
             android:weightSum="2">
 
             <Button
                 android:id="@+id/btn_gas_education"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:background="@drawable/button_background"
+                android:layout_marginRight="20dp"
                 android:layout_weight="1"
-                android:text="교육매뉴얼"
-                android:textSize="30sp"
+                android:background="@drawable/button_background"
+                android:text="@string/CPR_education"
                 android:textColor="@color/textColor_black"
-                android:textStyle="bold"/>
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btn_gas_gear"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:background="@drawable/button_background"
+                android:layout_marginRight="20dp"
                 android:layout_weight="1"
+                android:background="@drawable/button_background"
                 android:text="장비매뉴얼"
-                android:textSize="30sp"
                 android:textColor="@color/textColor_black"
-                android:textStyle="bold"/>
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
     </LinearLayout>
 

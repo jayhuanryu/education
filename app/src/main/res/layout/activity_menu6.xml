@@ -76,13 +76,13 @@
 
         <Button
             android:id="@+id/btn_prevent_goso"
-            android:layout_width="400dp"
-            android:layout_height="100dp"
-            android:gravity="center"
-            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:layout_marginBottom="212dp"
             android:background="@drawable/button_background"
+            android:gravity="center"
             android:text="@string/menu6btn1"
             android:textColor="@color/textColor_black"
             android:textSize="40sp"

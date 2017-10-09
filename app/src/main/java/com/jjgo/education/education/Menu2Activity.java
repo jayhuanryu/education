@@ -69,15 +69,15 @@ public class Menu2Activity extends AppCompatActivity {
             }
         });
 
-        btnGear = (Button) findViewById(R.id.btn_safety_gear);
-        btnGear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ll_first.setVisibility(GONE);
-                ll_content.setVisibility(View.VISIBLE);
-                setPDF("menu2Gear.pdf");
-            }
-        });
+//        btnGear = (Button) findViewById(R.id.btn_safety_gear);
+//        btnGear.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ll_first.setVisibility(GONE);
+//                ll_content.setVisibility(View.VISIBLE);
+//                setPDF("menu2Gear.pdf");
+//            }
+//        });
 
         btnShoes = (Button)findViewById(R.id.btn_shoes);
         btnShoes.setOnClickListener(new View.OnClickListener() {
@@ -104,7 +104,7 @@ public class Menu2Activity extends AppCompatActivity {
         Log.d("Menu2Activity", "filename ; " + filename);
 
         if (!filename.contains("Gear"))
-            tvPdfTitle.setText("교육매뉴얼");
+            tvPdfTitle.setText(getResources().getString(R.string.CPR_education));
         else
             tvPdfTitle.setText("장비매뉴얼");
 

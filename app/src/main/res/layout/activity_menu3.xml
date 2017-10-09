@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/blue_background"
-    android:orientation="vertical"
-    tools:context="com.jjgo.education.education.Menu3Activity">
+    tools:context="com.jjgo.education.education.Menu3Activity"
+    android:orientation="vertical">
 
     <!--  상단 -->
 
@@ -110,13 +110,13 @@
 
             <Button
                 android:id="@+id/btn_seatbelt_education"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_background"
-                android:text="교육매뉴얼"
+                android:text="@string/CPR_education"
                 android:textColor="@color/textColor_black"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -132,7 +132,8 @@
                 android:text="장비매뉴얼"
                 android:textColor="@color/textColor_black"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="gone" />
 
         </LinearLayout>
 
@@ -204,7 +205,7 @@
                         android:layout_below="@id/img_seatbelt_down"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
-                        android:text="하강"
+                        android:text="추락 및 하강"
                         android:textColor="@color/textColor_black"
                         android:textSize="30sp" />
                 </RelativeLayout>

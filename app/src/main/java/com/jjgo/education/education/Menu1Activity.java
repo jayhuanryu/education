@@ -75,17 +75,17 @@ public class Menu1Activity extends AppCompatActivity {
         });
 
         //장비
-        btnGear = (Button) findViewById(R.id.btn_gear);
-        btnGear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ll_first.setVisibility(View.GONE);
-                ll_start.setVisibility(View.GONE);
-                ll_content.setVisibility(View.VISIBLE);
-
-                setPDF("menu1Gear.pdf");
-            }
-        });
+//        btnGear = (Button) findViewById(R.id.btn_gear);
+//        btnGear.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ll_first.setVisibility(View.GONE);
+//                ll_start.setVisibility(View.GONE);
+//                ll_content.setVisibility(View.VISIBLE);
+//
+//                setPDF("menu1Gear.pdf");
+//            }
+//        });
 
         //img_ready clicked
         imgReady = (ImageView) findViewById(R.id.img_check);
@@ -119,7 +119,7 @@ public class Menu1Activity extends AppCompatActivity {
     }
     private void setPDF(String filename){
         if (filename.contains("Education"))
-            pdfTitle.setText("교육매뉴얼");
+            pdfTitle.setText(getResources().getString(R.string.CPR_education));
         else
             pdfTitle.setText("장비매뉴얼");
 

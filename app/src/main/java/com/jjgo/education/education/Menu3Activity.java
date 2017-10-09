@@ -69,13 +69,13 @@ public class Menu3Activity extends AppCompatActivity {
             }
         });
 
-        btnGear = (Button) findViewById(R.id.btn_seatbelt_gear);
-        btnGear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setPDF("menu3Gear.pdf");
-            }
-        });
+//        btnGear = (Button) findViewById(R.id.btn_seatbelt_gear);
+//        btnGear.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                setPDF("menu3Gear.pdf");
+//            }
+//        });
 
         imgReady = (ImageView) findViewById(R.id.img_seatbelt_check);
         imgReady.setOnClickListener(new View.OnClickListener() {
@@ -122,7 +122,7 @@ public class Menu3Activity extends AppCompatActivity {
         if (filename.contains("Gear"))
             pdfTitle.setText("장비매뉴얼");
         else
-            pdfTitle.setText("교육매뉴얼");
+            pdfTitle.setText(getResources().getString(R.string.CPR_education));
 
         pdfView.fromAsset(filename).load();
     }

@@ -1,4 +1,0 @@
-4dgearText
-test1
-test2
-test3

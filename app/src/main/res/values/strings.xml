@@ -1,7 +1,7 @@
 <resources>
 
 
-    <string name="app_name">Education</string>
+    <string name="app_name">안전체험교육장</string>
     <string name="p001_title">안전체험교육장</string>
     <string name="p001_subtitle">안전체험교육장</string> <!-- 현장명 -->
     <string name="p001_pw">1234</string>
@@ -34,6 +34,6 @@
 
 
     <!-- CPR Activity -->
-    <string name="CPR_education">교육 매뉴얼</string>
+    <string name="CPR_education">장비 사용 설명서</string>
     <string name="CPR_gear">장비 매뉴얼</string>
 </resources>

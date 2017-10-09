@@ -111,29 +111,30 @@
 
             <Button
                 android:id="@+id/btn_falls_education"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:background="@drawable/button_background"
+                android:layout_marginRight="20dp"
                 android:layout_weight="1"
-                android:text="교육매뉴얼"
-                android:textSize="30sp"
+                android:background="@drawable/button_background"
+                android:text="@string/CPR_education"
                 android:textColor="@color/textColor_black"
-                android:textStyle="bold"/>
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btn_falls_gear"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:background="@drawable/button_background"
+                android:layout_marginRight="20dp"
                 android:layout_weight="1"
+                android:background="@drawable/button_background"
                 android:text="장비매뉴얼"
-                android:textSize="30sp"
                 android:textColor="@color/textColor_black"
-                android:textStyle="bold"/>
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
 
         </LinearLayout>
 

@@ -111,8 +111,8 @@
 
             <Button
                 android:id="@+id/btn_crane_education"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
@@ -133,7 +133,8 @@
                 android:text="@string/CPR_gear"
                 android:textColor="@color/textColor_black"
                 android:textSize="40sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="gone" />
         </LinearLayout>
 
         <LinearLayout

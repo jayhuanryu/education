@@ -96,13 +96,13 @@ public class Menu10Activity extends AppCompatActivity {
                 setPDF("menu10Education.pdf");
             }
         });
-        btnGasGear = (Button)findViewById(R.id.btn_gas_gear);
-        btnGasGear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setPDF("menu10Gear.pdf");
-            }
-        });
+//        btnGasGear = (Button)findViewById(R.id.btn_gas_gear);
+//        btnGasGear.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                setPDF("menu10Gear.pdf");
+//            }
+//        });
     }
 
     private void setPDF(String filelname) {
@@ -113,7 +113,7 @@ public class Menu10Activity extends AppCompatActivity {
         if(filelname.contains("Gear"))
             pdfTitle.setText("장비메뉴얼");
         else
-            pdfTitle.setText("교육메뉴얼");
+            pdfTitle.setText(getResources().getString(R.string.CPR_education));
 
         pdfView.fromAsset(filelname).load();
 

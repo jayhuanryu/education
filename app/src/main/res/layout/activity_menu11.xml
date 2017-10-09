@@ -74,13 +74,13 @@
 
         <Button
             android:id="@+id/btn_overcurrent"
-            android:layout_width="400dp"
-            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="208dp"
             android:background="@drawable/button_background"
-            android:text="교육 매뉴얼"
+            android:text="@string/CPR_education"
             android:textColor="@color/textColor_black"
             android:textSize="40sp"
             android:textStyle="bold" />
@@ -89,14 +89,15 @@
             android:id="@+id/btn_autoprevent"
             android:layout_width="400dp"
             android:layout_height="100dp"
+            android:layout_alignLeft="@+id/btn_overcurrent"
+            android:layout_alignStart="@+id/btn_overcurrent"
+            android:layout_centerVertical="true"
             android:background="@drawable/button_background"
             android:text="장비 매뉴얼"
             android:textColor="@color/textColor_black"
             android:textSize="40sp"
             android:textStyle="bold"
-            android:layout_centerVertical="true"
-            android:layout_alignLeft="@+id/btn_overcurrent"
-            android:layout_alignStart="@+id/btn_overcurrent" />
+            android:visibility="gone" />
 
 
     </RelativeLayout>
